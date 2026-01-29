@@ -52,6 +52,28 @@ var NAVTREE =
         [ "4. Error Handling and Validation", "index.html#autotoc_md22", null ]
       ] ]
     ] ],
+    [ "Details", "md_docs_2doxygen__detailed__documentation.html", [
+      [ "Problem and analysis", "md_docs_2doxygen__detailed__documentation.html#autotoc_md26", null ],
+      [ "Internal specification", "md_docs_2doxygen__detailed__documentation.html#autotoc_md27", [
+        [ "Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the readme in root directory <span class=\"tt\">../README.md</span>", "md_docs_2doxygen__detailed__documentation.html#autotoc_md24", null ],
+        [ "Global Context", "md_docs_2doxygen__detailed__documentation.html#autotoc_md28", null ],
+        [ "Mathematical Core", "md_docs_2doxygen__detailed__documentation.html#autotoc_md29", [
+          [ "Modified Nodal Analysis (MNA)", "md_docs_2doxygen__detailed__documentation.html#autotoc_md30", null ],
+          [ "Bisection Optimization", "md_docs_2doxygen__detailed__documentation.html#autotoc_md31", null ]
+        ] ],
+        [ "Validation and Error Handling", "md_docs_2doxygen__detailed__documentation.html#autotoc_md32", null ],
+        [ "Output Generation", "md_docs_2doxygen__detailed__documentation.html#autotoc_md33", null ]
+      ] ],
+      [ "Testing - Basic Mode", "md_docs_2doxygen__detailed__documentation.html#autotoc_md35", [
+        [ "Example 1", "md_docs_2doxygen__detailed__documentation.html#autotoc_md36", null ],
+        [ "Example 2", "md_docs_2doxygen__detailed__documentation.html#autotoc_md38", null ]
+      ] ],
+      [ "Testing - Search Mode", "md_docs_2doxygen__detailed__documentation.html#autotoc_md40", [
+        [ "Example 1", "md_docs_2doxygen__detailed__documentation.html#autotoc_md41", null ],
+        [ "Example 2", "md_docs_2doxygen__detailed__documentation.html#autotoc_md42", null ],
+        [ "Example 3", "md_docs_2doxygen__detailed__documentation.html#autotoc_md44", null ]
+      ] ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

@@ -1,4 +1,4 @@
-# ALDCC Simulator
+# Details
 
 ALDCCsim is a C++ command-line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).
 
@@ -25,18 +25,18 @@ Obviously in some cases we need the output to be more precise than others and to
 This is why I also added a third command line switch allowing the user to specify precision of output parameters.
 
 The task mentions only solving a system with known element data and outputting currents, voltages and power balance, but in real use cases I found that I have to perform the opposite almost just as often.
-This is why I additionally implemented [search mode](#bisection-optimization) which uses bisection to find some element parameter knowing one of the currents, voltages or power balances. 
+This is why I additionally implemented [search mode](#bisection-optimization) which uses bisection to find some element parameter knowing one of the currents, voltages or power balances.
 The program still isn't suitable for solving more elaborate problems, but this add-on makes its applicability significantly higher.
 
 I also decided to replace the `I` current source symbol from the task decription with `J` as it is more commonly used and can't be misinterpretted as current.
 
 ## Internal specification
 ### Global Context
-The simulation state is aggregated into a central data structure, Context, which serves as the primary data transfer object between modules.
+The simulation state is aggregated into a central data structure, [Context](@ref Context), which serves as the primary data transfer object between modules.
 
-- Element Storage: All circuit components are stored in a std::vector<Element>, where each Element contains its type, connection nodes, value, and computed results (voltage, current, power). 
-- Equation System: The MNA system is represented by an augmented matrix (std::vector<std::vector<double>> equations), where the number of unknowns corresponds to the maximum node index plus the number of independent voltage sources. 
-- Bisection State: To support the optimization mode, the context holds a pointer to a variable_elem (the component being tuned) and a GivenValue structure defining the target metric (desired_value) and type (v_type).
+- Element Storage: All circuit components are stored in a std::vector<[Element](@ref Element)>, where each Element contains its type, connection nodes, value, and computed results (voltage, current, power).
+- Equation System: The MNA system is represented by an augmented matrix (std::vector<std::vector<double>> equations), where the number of unknowns corresponds to the maximum node index plus the number of independent voltage sources.
+- Bisection State: To support the optimization mode, the context holds a pointer to a [variable_elem](@ref variable_elem) (the component being tuned) and a [GivenValue](@ref GivenValue) structure defining the target metric (desired_value) and type (v_type).
 
 ### Mathematical Core
 #### Modified Nodal Analysis (MNA)
@@ -48,15 +48,15 @@ Equation Formulation:
 - Constitutive Equations: Generated for voltage sources, introducing the source current as an additional unknown.
 - Ground Reference: The potential of Node `1` is explicitly constrained to zero.
 
-Matrix Solution: 
+Matrix Solution:
 - The system is solved using Gaussian elimination with partial pivoting to maximize numerical stability before decoding the results into node potentials and source currents.
 
 #### Bisection Optimization
 
 When a variable element is detected, the bisect module wraps the MNA solver in an iterative loop.
-- Monotonicity Check: The variable element is perturbed by EPSILON (2E−10) to determine the sign of the derivative of the output with respect to the input.
+- Monotonicity Check: The variable element is perturbed by [EPSILON](@ref EPSILON) (2E−10) to determine the sign of the derivative of the output with respect to the input.
 - Bound Search: The search interval is iteratively doubled until the target value is bracketed by the output range.
-- Convergence: The algorithm performs a fixed number of iterations (BISECTION_PREC = 50) to narrow the interval, updating the output_value in the Context after every step.
+- Convergence: The algorithm performs a fixed number of iterations ([BISECTION_PREC](@ref BISECTION_PREC) = 50) to narrow the interval, updating the [output_value](@ref output_value) in the [Context](@ref Context) after every step.
 
 ### Validation and Error Handling
 
@@ -70,7 +70,7 @@ The system includes pre-solve validation to reject topologically invalid circuit
 The simulator writes a comprehensive report to the specified output file.
 - Element Table: Lists every element's type, nodes, and calculated Voltage (U), Current (I), and Power (P).
 - Potentials: Lists the calculated electric potential (V) for every node in the circuit.
-- Formatting: All floating-point values are rounded to the user-specified precision (defaulting to 4 decimal places) using a scaling factor, with specific handling to prevent negative zero outputs.
+- Formatting: All floating-point values are rounded to the user-specified precision (defaulting to 4 decimal places) using a [scaling factor](@ref prec_factor), with specific handling to prevent negative zero outputs.
 
 ---
 

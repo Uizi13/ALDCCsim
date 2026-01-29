@@ -7,9 +7,12 @@ var searchData=
 &lt;p&gt;Note: Because we marked the ground node on the left as node &lt;span class=&quot;tt&quot;&gt;1&lt;/span&gt;, we can do the same on the right - they are effectively the same node.&lt;/p&gt;
 &lt;/blockquote&gt;
 ',['../index.html#autotoc_md8',1,'']]],
-  ['max_5fnode_4',['max_node',['../struct_context.html#a6672dc411b3e1c17056bc9669f50d518',1,'Context']]],
-  ['mna_5',['1. Modified Nodal Analysis (MNA)',['../index.html#autotoc_md19',1,'']]],
-  ['mode_6',['Basic mode',['../index.html#autotoc_md5',1,'']]],
-  ['mode_20bisection_7',['Search Mode (Bisection)',['../index.html#autotoc_md9',1,'']]],
-  ['modified_20nodal_20analysis_20mna_8',['1. Modified Nodal Analysis (MNA)',['../index.html#autotoc_md19',1,'']]]
+  ['mathematical_20core_4',['Mathematical Core',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md29',1,'']]],
+  ['max_5fnode_5',['max_node',['../struct_context.html#a6672dc411b3e1c17056bc9669f50d518',1,'Context']]],
+  ['md_6',['Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the readme in root directory &lt;span class=&quot;tt&quot;&gt;../README.md&lt;/span&gt;',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md24',1,'']]],
+  ['mna_7',['MNA',['../index.html#autotoc_md19',1,'1. Modified Nodal Analysis (MNA)'],['../md_docs_2doxygen__detailed__documentation.html#autotoc_md30',1,'Modified Nodal Analysis (MNA)']]],
+  ['mode_8',['Mode',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md35',1,'Testing - Basic Mode'],['../md_docs_2doxygen__detailed__documentation.html#autotoc_md40',1,'Testing - Search Mode']]],
+  ['mode_9',['Basic mode',['../index.html#autotoc_md5',1,'']]],
+  ['mode_20bisection_10',['Search Mode (Bisection)',['../index.html#autotoc_md9',1,'']]],
+  ['modified_20nodal_20analysis_20mna_11',['Modified Nodal Analysis MNA',['../index.html#autotoc_md19',1,'1. Modified Nodal Analysis (MNA)'],['../md_docs_2doxygen__detailed__documentation.html#autotoc_md30',1,'Modified Nodal Analysis (MNA)']]]
 ];

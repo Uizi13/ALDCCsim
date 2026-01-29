@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['ground_20node_20on_20the_20left_20as_20node_201_20we_20can_20do_20the_20same_20on_20the_20right_20they_20are_20effectively_20the_20same_20node_0',['&lt;blockquote class=&quot;doxtable&quot;&gt;
+  ['generation_0',['Output Generation',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md33',1,'']]],
+  ['global_20context_1',['Global Context',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md28',1,'']]],
+  ['ground_20node_20on_20the_20left_20as_20node_201_20we_20can_20do_20the_20same_20on_20the_20right_20they_20are_20effectively_20the_20same_20node_2',['&lt;blockquote class=&quot;doxtable&quot;&gt;
 &lt;p&gt;Note: Because we marked the ground node on the left as node &lt;span class=&quot;tt&quot;&gt;1&lt;/span&gt;, we can do the same on the right - they are effectively the same node.&lt;/p&gt;
 &lt;/blockquote&gt;
 ',['../index.html#autotoc_md8',1,'']]]

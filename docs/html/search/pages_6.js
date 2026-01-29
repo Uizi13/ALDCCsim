@@ -6,5 +6,7 @@ var searchData=
 &lt;/blockquote&gt;
 ',['../index.html#autotoc_md8',1,'']]],
   ['command_20line_20arguments_2',['Command Line Arguments',['../index.html#autotoc_md4',1,'']]],
-  ['convention_3',['Sign Convention',['../index.html#autotoc_md16',1,'']]]
+  ['context_3',['Global Context',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md28',1,'']]],
+  ['convention_4',['Sign Convention',['../index.html#autotoc_md16',1,'']]],
+  ['core_5',['Mathematical Core',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md29',1,'']]]
 ];

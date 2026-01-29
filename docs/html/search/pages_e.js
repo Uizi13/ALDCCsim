@@ -5,8 +5,11 @@ var searchData=
 &lt;p&gt;Note: Because we marked the ground node on the left as node &lt;span class=&quot;tt&quot;&gt;1&lt;/span&gt;, we can do the same on the right - they are effectively the same node.&lt;/p&gt;
 &lt;/blockquote&gt;
 ',['../index.html#autotoc_md8',1,'']]],
-  ['mna_2',['1. Modified Nodal Analysis (MNA)',['../index.html#autotoc_md19',1,'']]],
-  ['mode_3',['Basic mode',['../index.html#autotoc_md5',1,'']]],
-  ['mode_20bisection_4',['Search Mode (Bisection)',['../index.html#autotoc_md9',1,'']]],
-  ['modified_20nodal_20analysis_20mna_5',['1. Modified Nodal Analysis (MNA)',['../index.html#autotoc_md19',1,'']]]
+  ['mathematical_20core_2',['Mathematical Core',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md29',1,'']]],
+  ['md_3',['Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the readme in root directory &lt;span class=&quot;tt&quot;&gt;../README.md&lt;/span&gt;',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md24',1,'']]],
+  ['mna_4',['MNA',['../index.html#autotoc_md19',1,'1. Modified Nodal Analysis (MNA)'],['../md_docs_2doxygen__detailed__documentation.html#autotoc_md30',1,'Modified Nodal Analysis (MNA)']]],
+  ['mode_5',['Mode',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md35',1,'Testing - Basic Mode'],['../md_docs_2doxygen__detailed__documentation.html#autotoc_md40',1,'Testing - Search Mode']]],
+  ['mode_6',['Basic mode',['../index.html#autotoc_md5',1,'']]],
+  ['mode_20bisection_7',['Search Mode (Bisection)',['../index.html#autotoc_md9',1,'']]],
+  ['modified_20nodal_20analysis_20mna_8',['Modified Nodal Analysis MNA',['../index.html#autotoc_md19',1,'1. Modified Nodal Analysis (MNA)'],['../md_docs_2doxygen__detailed__documentation.html#autotoc_md30',1,'Modified Nodal Analysis (MNA)']]]
 ];
