@@ -178,6 +178,3 @@ The program performs several topological checks before solving:
 - **Current Source Only Nodes**: Detects nodes connected only to current sources, which makes voltage indeterminate.
 - **Parallel Voltage Sources**: Identifies illegal parallel voltage source configurations that would lead to indeterminate branch currents.
 - **Contradictory Equations**: Throws an error during Gaussian elimination if the circuit description leads to an unsolvable system.
-
-
-
