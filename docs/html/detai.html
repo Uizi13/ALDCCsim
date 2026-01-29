@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('md_docs_2doxygen__detailed__documentation.html','',''); });
+$(function(){initNavTree('detai.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -92,13 +92,12 @@ $(function(){initNavTree('md_docs_2doxygen__detailed__documentation.html','','')
   <div class="headertitle"><div class="title">Details </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md23"></a></p>
-<p>a{config_file}</p>
+<div class="textblock"><p><a class="anchor" id="md_docs_2doxygen__detailed__documentation"></a></p>
 <p>ALDCCsim is a C++ command-line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
 Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main">main</a> page</h2>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 Problem and analysis</h1>
 <p><img src="../images/aldcc-task-2.jpg" alt="" class="inline"/></p>
 <p>Based on the provided code and the task description image, the core problem is the development of a software simulation tool capable of analyzing linear direct current (DC) circuits. The fundamental objective is to parse a textual representation of a circuit, commonly referred to as a netlist, and calculate the steady-state operating point for every component. This involves determining the voltage across, current through, and power dissipated by each resistor, voltage source, and current source in the network.</p>
@@ -106,9 +105,9 @@ Problem and analysis</h1>
 <p>Several improvements can be made on top of what the task specifies. I decided to add a simple parallel voltage source check and a check for nodes with only current sources connected since these configurations result in the circuit being indeterminate. Obviously in some cases we need the output to be more precise than others and too high precision at all times results in the output being less readable. This is why I also added a third command line switch allowing the user to specify precision of output parameters.</p>
 <p>The task mentions only solving a system with known element data and outputting currents, voltages and power balance, but in real use cases I found that I have to perform the opposite almost just as often. This is why I additionally implemented search mode which uses bisection to find some element parameter knowing one of the currents, voltages or power balances. The program still isn't suitable for solving more elaborate problems, but this add-on makes its applicability significantly higher.</p>
 <p>I also decided to replace the <span class="tt">I</span> current source symbol from the task decription with <span class="tt">J</span> as it is more commonly used and can't be misinterpretted as current.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
 Internal specification</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
 Global Context</h2>
 <p>The simulation state is aggregated into a central data structure, <a class="el" href="struct_context.html" title="Context">Context</a>, which serves as the primary data transfer object between modules.</p>
 <ul>
@@ -116,9 +115,9 @@ Global Context</h2>
 <li>Equation System: The MNA system is represented by an augmented matrix (std::vector&lt;std::vector&lt;double&gt;&gt; equations), where the number of unknowns corresponds to the maximum node index plus the number of independent voltage sources.</li>
 <li>Bisection State: To support the optimization mode, the context holds a pointer to a variable_elem (the component being tuned) and a <a class="el" href="struct_given_value.html" title="GivenValue">GivenValue</a> structure defining the target metric (desired_value) and type (v_type).</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
 Mathematical Core</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 Modified Nodal Analysis (MNA)</h3>
 <p>The solver constructs a linear system <span class="tt">Ax=b</span> to determine the circuit state.</p>
 <p>Equation Formulation:</p><ul>
@@ -129,21 +128,21 @@ Modified Nodal Analysis (MNA)</h3>
 <p>Matrix Solution:</p><ul>
 <li>The system is solved using Gaussian elimination with partial pivoting to maximize numerical stability before decoding the results into node potentials and source currents.</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
 Bisection Optimization</h3>
 <p>When a variable element is detected, the bisect module wraps the MNA solver in an iterative loop.</p><ul>
 <li>Monotonicity Check: The variable element is perturbed by EPSILON (2E-10) to determine the sign of the derivative of the output with respect to the input.</li>
 <li>Bound Search: The search interval is iteratively doubled until the target value is bracketed by the output range.</li>
 <li>Convergence: The algorithm performs a fixed number of iterations (BISECTION_PREC = 50) to narrow the interval, updating the output_value in the <a class="el" href="struct_context.html" title="Context">Context</a> after every step.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
 Validation and Error Handling</h2>
 <p>The system includes pre-solve validation to reject topologically invalid circuits:</p><ul>
 <li>Indeterminate Nodes: Detects nodes connected exclusively to current sources, which result in undefined node potentials.</li>
 <li>Parallel Voltage Sources: Identifies voltage sources sharing the same node pair, which creates a singular matrix due to indeterminate loop currents.</li>
 <li>Singular Matrices: The Gaussian elimination process throws a runtime error if inconsistent or dependent equations (e.g., 0 = non-zero) are encountered.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
 Output Generation</h2>
 <p>The simulator writes a comprehensive report to the specified output file.</p><ul>
 <li>Element Table: Lists every element's type, nodes, and calculated Voltage (U), Current (I), and Power (P).</li>
@@ -151,9 +150,9 @@ Output Generation</h2>
 <li>Formatting: All floating-point values are rounded to the user-specified precision (defaulting to 4 decimal places) using a scaling factor, with specific handling to prevent negative zero outputs.</li>
 </ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
 Testing - Basic Mode</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md36"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
 Example 1</h2>
 <p><img src="../images/example1.jpg" alt="" class="inline"/></p>
 <p>Command: <span class="tt">ALDCCsim.exe -i data.txt -o solution.txt -p 5</span></p>
@@ -182,7 +181,7 @@ Example 1</h2>
 <div class="line">  3   |        17.333 </div>
 <div class="line">  4   |        32.667 </div>
 </div><!-- fragment --> <hr  />
- <h2 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
+ <h2 class="doxsection"><a class="anchor" id="autotoc_md37"></a>
 Example 2</h2>
 <p><img src="../images/example2.jpg" alt="" class="inline"/></p>
 <p>Command: <span class="tt">ALDCCsim.exe -i data.txt -o solution.txt</span></p>
@@ -219,9 +218,9 @@ Example 2</h2>
 <div class="line">  5   |           -30 </div>
 <div class="line">  6   |             0 </div>
 </div><!-- fragment --> <hr  />
- <h1 class="doxsection"><a class="anchor" id="autotoc_md40"></a>
+ <h1 class="doxsection"><a class="anchor" id="autotoc_md39"></a>
 Testing - Search Mode</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md40"></a>
 Example 1</h2>
 <p><img src="../images/example3.jpg" alt="" class="inline"/></p>
 <p>Command: <span class="tt">ALDCCsim.exe -i data.txt -o solution.txt</span></p>
@@ -241,7 +240,7 @@ Example 1</h2>
 <div class="line">  1   |             0 </div>
 <div class="line">  2   |            10 </div>
 <div class="line">  3   |             5 </div>
-</div><!-- fragment --> <h2 class="doxsection"><a class="anchor" id="autotoc_md42"></a>
+</div><!-- fragment --> <h2 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
 Example 2</h2>
 <p><img src="../images/example4.jpg" alt="" class="inline"/></p>
 <p>Command: <span class="tt">ALDCCsim.exe -i data.txt -o solution.txt -p 7</span></p>
@@ -296,7 +295,7 @@ Example 2</h2>
 <div class="line">  4   |       -16.487 </div>
 <div class="line">  5   |       -11.927 </div>
 </div><!-- fragment --> <hr  />
- <h2 class="doxsection"><a class="anchor" id="autotoc_md44"></a>
+ <h2 class="doxsection"><a class="anchor" id="autotoc_md43"></a>
 Example 3</h2>
 <p><img src="../images/example5.jpg" alt="" class="inline"/></p>
 <p>Command: <span class="tt">ALDCCsim.exe -i data.txt -o solution.txt -p 7</span></p>

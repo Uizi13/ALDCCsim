@@ -1,317 +1,323 @@
 \begin{theindex}
 
   \item {avg}
-    \subitem {util.cpp}, \hyperpage{43}
-    \subitem {util.hpp}, \hyperpage{32}
+    \subitem {util.cpp}, \hyperpage{59}
+    \subitem {util.hpp}, \hyperpage{42}
 
   \indexspace
 
   \item {bisect}
-    \subitem {bisect.cpp}, \hyperpage{36}
-    \subitem {bisect.hpp}, \hyperpage{21}
+    \subitem {bisect.cpp}, \hyperpage{48}
+    \subitem {bisect.hpp}, \hyperpage{27}
   \item {bisect.cpp}
-    \subitem {bisect}, \hyperpage{36}
-    \subitem {find\_bound}, \hyperpage{36}
-    \subitem {find\_derivative\_sign}, \hyperpage{37}
-    \subitem {update\_bisection\_output}, \hyperpage{37}
+    \subitem {bisect}, \hyperpage{48}
+    \subitem {find\_bound}, \hyperpage{48}
+    \subitem {find\_derivative\_sign}, \hyperpage{49}
+    \subitem {update\_bisection\_output}, \hyperpage{50}
   \item {bisect.hpp}
-    \subitem {bisect}, \hyperpage{21}
-    \subitem {find\_bound}, \hyperpage{21}
-    \subitem {find\_derivative\_sign}, \hyperpage{22}
-    \subitem {update\_bisection\_output}, \hyperpage{22}
+    \subitem {bisect}, \hyperpage{27}
+    \subitem {find\_bound}, \hyperpage{28}
+    \subitem {find\_derivative\_sign}, \hyperpage{29}
+    \subitem {update\_bisection\_output}, \hyperpage{30}
   \item {BISECTION\_PREC}
-    \subitem {constants}, \hyperpage{13}
+    \subitem {constants}, \hyperpage{19}
 
   \indexspace
 
   \item {c\_source}
-    \subitem {element.hpp}, \hyperpage{26}
-  \item {cli}, \hyperpage{11}
-    \subitem {in}, \hyperpage{12}
-    \subitem {none}, \hyperpage{12}
-    \subitem {out}, \hyperpage{12}
-    \subitem {parse}, \hyperpage{12}
-    \subitem {prec}, \hyperpage{12}
-    \subitem {Switch}, \hyperpage{12}
-  \item {cli::Input}, \hyperpage{19}
-    \subitem {ifname}, \hyperpage{20}
-    \subitem {ofname}, \hyperpage{20}
-    \subitem {prec}, \hyperpage{20}
-  \item {constants}, \hyperpage{12}
-    \subitem {BISECTION\_PREC}, \hyperpage{13}
-    \subitem {EPSILON}, \hyperpage{13}
-    \subitem {prec\_factor}, \hyperpage{13}
-    \subitem {PRECISION}, \hyperpage{13}
-    \subitem {ZERO\_TRESHOLD}, \hyperpage{13}
-  \item {Context}, \hyperpage{15}
-    \subitem {elements}, \hyperpage{15}
-    \subitem {equations}, \hyperpage{15}
-    \subitem {given\_value}, \hyperpage{15}
-    \subitem {max\_node}, \hyperpage{16}
-    \subitem {number\_of\_unknowns}, \hyperpage{16}
-    \subitem {output\_value}, \hyperpage{16}
-    \subitem {v\_source\_currents\_map}, \hyperpage{16}
-    \subitem {variable\_elem}, \hyperpage{16}
+    \subitem {element.hpp}, \hyperpage{33}
+  \item {cli}, \hyperpage{17}
+    \subitem {in}, \hyperpage{17}
+    \subitem {none}, \hyperpage{17}
+    \subitem {out}, \hyperpage{17}
+    \subitem {parse}, \hyperpage{18}
+    \subitem {prec}, \hyperpage{17}
+    \subitem {Switch}, \hyperpage{17}
+  \item {cli::Input}, \hyperpage{25}
+    \subitem {ifname}, \hyperpage{26}
+    \subitem {ofname}, \hyperpage{26}
+    \subitem {prec}, \hyperpage{26}
+  \item {constants}, \hyperpage{18}
+    \subitem {BISECTION\_PREC}, \hyperpage{19}
+    \subitem {EPSILON}, \hyperpage{19}
+    \subitem {prec\_factor}, \hyperpage{18}
+    \subitem {PRECISION}, \hyperpage{19}
+    \subitem {ZERO\_TRESHOLD}, \hyperpage{19}
+  \item {Context}, \hyperpage{21}
+    \subitem {elements}, \hyperpage{22}
+    \subitem {equations}, \hyperpage{22}
+    \subitem {given\_value}, \hyperpage{22}
+    \subitem {max\_node}, \hyperpage{22}
+    \subitem {number\_of\_unknowns}, \hyperpage{22}
+    \subitem {output\_value}, \hyperpage{22}
+    \subitem {potentials}, \hyperpage{22}
+    \subitem {v\_source\_currents\_map}, \hyperpage{22}
+    \subitem {variable\_elem}, \hyperpage{22}
   \item {current}
-    \subitem {Element}, \hyperpage{18}
-    \subitem {element.hpp}, \hyperpage{26}
+    \subitem {Element}, \hyperpage{24}
+    \subitem {element.hpp}, \hyperpage{33}
   \item {current\_source\_only\_node}
-    \subitem {util.cpp}, \hyperpage{43}
-    \subitem {util.hpp}, \hyperpage{32}
+    \subitem {util.cpp}, \hyperpage{60}
+    \subitem {util.hpp}, \hyperpage{42}
 
   \indexspace
 
   \item {decode\_and\_normalize}
-    \subitem {solver.cpp}, \hyperpage{41}
-    \subitem {solver.hpp}, \hyperpage{29}
+    \subitem {solver.cpp}, \hyperpage{54}
+    \subitem {solver.hpp}, \hyperpage{37}
   \item {desired\_value}
-    \subitem {GivenValue}, \hyperpage{19}
+    \subitem {GivenValue}, \hyperpage{25}
+  \item {Details}, \hyperpage{1}
+  \item {docs Directory Reference}, \hyperpage{15}
+  \item {docs/doxygen\_detailed\_documentation.md}, \hyperpage{27}
 
   \indexspace
 
   \item {elem}
-    \subitem {GivenValue}, \hyperpage{19}
-  \item {Element}, \hyperpage{16}
-    \subitem {current}, \hyperpage{18}
-    \subitem {is\_directed\_outwards}, \hyperpage{17}
-    \subitem {nodes}, \hyperpage{18}
-    \subitem {other\_node}, \hyperpage{17}
-    \subitem {power}, \hyperpage{18}
-    \subitem {sign\_of\_current}, \hyperpage{17}
-    \subitem {type}, \hyperpage{18}
-    \subitem {value}, \hyperpage{18}
-    \subitem {voltage}, \hyperpage{18}
+    \subitem {GivenValue}, \hyperpage{25}
+  \item {Element}, \hyperpage{22}
+    \subitem {current}, \hyperpage{24}
+    \subitem {is\_directed\_outwards}, \hyperpage{23}
+    \subitem {nodes}, \hyperpage{24}
+    \subitem {other\_node}, \hyperpage{23}
+    \subitem {power}, \hyperpage{24}
+    \subitem {sign\_of\_current}, \hyperpage{23}
+    \subitem {type}, \hyperpage{24}
+    \subitem {value}, \hyperpage{24}
+    \subitem {voltage}, \hyperpage{24}
   \item {element.hpp}
-    \subitem {c\_source}, \hyperpage{26}
-    \subitem {current}, \hyperpage{26}
-    \subitem {ElementType}, \hyperpage{26}
-    \subitem {power}, \hyperpage{26}
-    \subitem {resistor}, \hyperpage{26}
-    \subitem {v\_source}, \hyperpage{26}
-    \subitem {ValueType}, \hyperpage{26}
-    \subitem {voltage}, \hyperpage{26}
+    \subitem {c\_source}, \hyperpage{33}
+    \subitem {current}, \hyperpage{33}
+    \subitem {ElementType}, \hyperpage{33}
+    \subitem {power}, \hyperpage{33}
+    \subitem {resistor}, \hyperpage{33}
+    \subitem {v\_source}, \hyperpage{33}
+    \subitem {ValueType}, \hyperpage{33}
+    \subitem {voltage}, \hyperpage{33}
   \item {elements}
-    \subitem {Context}, \hyperpage{15}
+    \subitem {Context}, \hyperpage{22}
   \item {ElementType}
-    \subitem {element.hpp}, \hyperpage{26}
+    \subitem {element.hpp}, \hyperpage{33}
   \item {EPSILON}
-    \subitem {constants}, \hyperpage{13}
+    \subitem {constants}, \hyperpage{19}
   \item {equations}
-    \subitem {Context}, \hyperpage{15}
+    \subitem {Context}, \hyperpage{22}
 
   \indexspace
 
   \item {file\_io.cpp}
-    \subitem {read}, \hyperpage{38}
-    \subitem {write}, \hyperpage{39}
-    \subitem {write\_element}, \hyperpage{39}
+    \subitem {read}, \hyperpage{51}
+    \subitem {write}, \hyperpage{52}
+    \subitem {write\_element}, \hyperpage{52}
   \item {file\_io.hpp}
-    \subitem {read}, \hyperpage{27}
-    \subitem {write}, \hyperpage{27}
-    \subitem {write\_element}, \hyperpage{28}
+    \subitem {read}, \hyperpage{34}
+    \subitem {write}, \hyperpage{35}
+    \subitem {write\_element}, \hyperpage{36}
   \item {finalize}
-    \subitem {solver.cpp}, \hyperpage{41}
-    \subitem {solver.hpp}, \hyperpage{29}
+    \subitem {solver.cpp}, \hyperpage{55}
+    \subitem {solver.hpp}, \hyperpage{38}
   \item {find\_bound}
-    \subitem {bisect.cpp}, \hyperpage{36}
-    \subitem {bisect.hpp}, \hyperpage{21}
+    \subitem {bisect.cpp}, \hyperpage{48}
+    \subitem {bisect.hpp}, \hyperpage{28}
   \item {find\_derivative\_sign}
-    \subitem {bisect.cpp}, \hyperpage{37}
-    \subitem {bisect.hpp}, \hyperpage{22}
+    \subitem {bisect.cpp}, \hyperpage{49}
+    \subitem {bisect.hpp}, \hyperpage{29}
   \item {find\_equations}
-    \subitem {solver.cpp}, \hyperpage{41}
-    \subitem {solver.hpp}, \hyperpage{30}
+    \subitem {solver.cpp}, \hyperpage{56}
+    \subitem {solver.hpp}, \hyperpage{38}
 
   \indexspace
 
   \item {get\_number\_of\_unknowns}
-    \subitem {util.cpp}, \hyperpage{44}
-    \subitem {util.hpp}, \hyperpage{32}
+    \subitem {util.cpp}, \hyperpage{60}
+    \subitem {util.hpp}, \hyperpage{43}
   \item {given\_value}
-    \subitem {Context}, \hyperpage{15}
-  \item {GivenValue}, \hyperpage{19}
-    \subitem {desired\_value}, \hyperpage{19}
-    \subitem {elem}, \hyperpage{19}
-    \subitem {v\_type}, \hyperpage{19}
+    \subitem {Context}, \hyperpage{22}
+  \item {GivenValue}, \hyperpage{25}
+    \subitem {desired\_value}, \hyperpage{25}
+    \subitem {elem}, \hyperpage{25}
+    \subitem {v\_type}, \hyperpage{25}
 
   \indexspace
 
   \item {ifname}
-    \subitem {cli::Input}, \hyperpage{20}
+    \subitem {cli::Input}, \hyperpage{26}
   \item {in}
-    \subitem {cli}, \hyperpage{12}
-  \item {include Directory Reference}, \hyperpage{9}
-  \item {include/bisect.hpp}, \hyperpage{21}, \hyperpage{23}
-  \item {include/cli.hpp}, \hyperpage{23, 24}
-  \item {include/constants.hpp}, \hyperpage{24}
-  \item {include/context.hpp}, \hyperpage{25}
-  \item {include/element.hpp}, \hyperpage{25, 26}
-  \item {include/file\_io.hpp}, \hyperpage{27, 28}
-  \item {include/solver.hpp}, \hyperpage{28}, \hyperpage{31}
-  \item {include/util.hpp}, \hyperpage{31}, \hyperpage{35}
+    \subitem {cli}, \hyperpage{17}
+  \item {include Directory Reference}, \hyperpage{15}
+  \item {include/bisect.hpp}, \hyperpage{27}, \hyperpage{31}
+  \item {include/cli.hpp}, \hyperpage{31}
+  \item {include/constants.hpp}, \hyperpage{32}
+  \item {include/context.hpp}, \hyperpage{32}
+  \item {include/element.hpp}, \hyperpage{33, 34}
+  \item {include/file\_io.hpp}, \hyperpage{34}, \hyperpage{36}
+  \item {include/solver.hpp}, \hyperpage{37}, \hyperpage{41}
+  \item {include/util.hpp}, \hyperpage{41}, \hyperpage{47}
   \item {init\_vector}
-    \subitem {util.cpp}, \hyperpage{44}
-    \subitem {util.hpp}, \hyperpage{33}
+    \subitem {util.cpp}, \hyperpage{61}
+    \subitem {util.hpp}, \hyperpage{43}
   \item {insert\_ground\_node\_equation}
-    \subitem {util.cpp}, \hyperpage{45}
-    \subitem {util.hpp}, \hyperpage{33}
+    \subitem {util.cpp}, \hyperpage{61}
+    \subitem {util.hpp}, \hyperpage{44}
   \item {is\_directed\_outwards}
-    \subitem {Element}, \hyperpage{17}
+    \subitem {Element}, \hyperpage{23}
 
   \indexspace
 
   \item {main}
-    \subitem {main.cpp}, \hyperpage{40}
+    \subitem {main.cpp}, \hyperpage{53}
   \item {main.cpp}
-    \subitem {main}, \hyperpage{40}
+    \subitem {main}, \hyperpage{53}
   \item {max\_node}
-    \subitem {Context}, \hyperpage{16}
+    \subitem {Context}, \hyperpage{22}
 
   \indexspace
 
   \item {node\_key}
-    \subitem {util.cpp}, \hyperpage{45}
-    \subitem {util.hpp}, \hyperpage{33}
+    \subitem {util.cpp}, \hyperpage{62}
+    \subitem {util.hpp}, \hyperpage{44}
   \item {nodes}
-    \subitem {Element}, \hyperpage{18}
+    \subitem {Element}, \hyperpage{24}
   \item {none}
-    \subitem {cli}, \hyperpage{12}
+    \subitem {cli}, \hyperpage{17}
   \item {number\_of\_unknowns}
-    \subitem {Context}, \hyperpage{16}
+    \subitem {Context}, \hyperpage{22}
 
   \indexspace
 
   \item {ofname}
-    \subitem {cli::Input}, \hyperpage{20}
+    \subitem {cli::Input}, \hyperpage{26}
   \item {other\_node}
-    \subitem {Element}, \hyperpage{17}
+    \subitem {Element}, \hyperpage{23}
   \item {out}
-    \subitem {cli}, \hyperpage{12}
+    \subitem {cli}, \hyperpage{17}
   \item {output\_value}
-    \subitem {Context}, \hyperpage{16}
+    \subitem {Context}, \hyperpage{22}
 
   \indexspace
 
   \item {parallel\_voltage\_sources}
-    \subitem {util.cpp}, \hyperpage{45}
-    \subitem {util.hpp}, \hyperpage{34}
+    \subitem {util.cpp}, \hyperpage{63}
+    \subitem {util.hpp}, \hyperpage{45}
   \item {parse}
-    \subitem {cli}, \hyperpage{12}
+    \subitem {cli}, \hyperpage{18}
+  \item {potentials}
+    \subitem {Context}, \hyperpage{22}
   \item {power}
-    \subitem {Element}, \hyperpage{18}
-    \subitem {element.hpp}, \hyperpage{26}
-    \subitem {util.hpp}, \hyperpage{34}
+    \subitem {Element}, \hyperpage{24}
+    \subitem {element.hpp}, \hyperpage{33}
+    \subitem {util.hpp}, \hyperpage{46}
   \item {prec}
-    \subitem {cli}, \hyperpage{12}
-    \subitem {cli::Input}, \hyperpage{20}
+    \subitem {cli}, \hyperpage{17}
+    \subitem {cli::Input}, \hyperpage{26}
   \item {prec\_factor}
-    \subitem {constants}, \hyperpage{13}
+    \subitem {constants}, \hyperpage{18}
   \item {PRECISION}
-    \subitem {constants}, \hyperpage{13}
+    \subitem {constants}, \hyperpage{19}
 
   \indexspace
 
   \item {read}
-    \subitem {file\_io.cpp}, \hyperpage{38}
-    \subitem {file\_io.hpp}, \hyperpage{27}
+    \subitem {file\_io.cpp}, \hyperpage{51}
+    \subitem {file\_io.hpp}, \hyperpage{34}
   \item {resistor}
-    \subitem {element.hpp}, \hyperpage{26}
+    \subitem {element.hpp}, \hyperpage{33}
   \item {round\_to\_prec}
-    \subitem {util.cpp}, \hyperpage{46}
-    \subitem {util.hpp}, \hyperpage{35}
+    \subitem {util.cpp}, \hyperpage{63}
+    \subitem {util.hpp}, \hyperpage{46}
   \item {run}
-    \subitem {solver.cpp}, \hyperpage{42}
-    \subitem {solver.hpp}, \hyperpage{30}
+    \subitem {solver.cpp}, \hyperpage{57}
+    \subitem {solver.hpp}, \hyperpage{39}
 
   \indexspace
 
   \item {sign\_of\_current}
-    \subitem {Element}, \hyperpage{17}
+    \subitem {Element}, \hyperpage{23}
   \item {solve}
-    \subitem {solver.cpp}, \hyperpage{42}
-    \subitem {solver.hpp}, \hyperpage{30}
+    \subitem {solver.cpp}, \hyperpage{58}
+    \subitem {solver.hpp}, \hyperpage{40}
   \item {solver.cpp}
-    \subitem {decode\_and\_normalize}, \hyperpage{41}
-    \subitem {finalize}, \hyperpage{41}
-    \subitem {find\_equations}, \hyperpage{41}
-    \subitem {run}, \hyperpage{42}
-    \subitem {solve}, \hyperpage{42}
+    \subitem {decode\_and\_normalize}, \hyperpage{54}
+    \subitem {finalize}, \hyperpage{55}
+    \subitem {find\_equations}, \hyperpage{56}
+    \subitem {run}, \hyperpage{57}
+    \subitem {solve}, \hyperpage{58}
   \item {solver.hpp}
-    \subitem {decode\_and\_normalize}, \hyperpage{29}
-    \subitem {finalize}, \hyperpage{29}
-    \subitem {find\_equations}, \hyperpage{30}
-    \subitem {run}, \hyperpage{30}
-    \subitem {solve}, \hyperpage{30}
-  \item {src Directory Reference}, \hyperpage{9}
-  \item {src/bisect.cpp}, \hyperpage{36}
-  \item {src/cli.cpp}, \hyperpage{37}
-  \item {src/file\_io.cpp}, \hyperpage{38}
-  \item {src/main.cpp}, \hyperpage{40}
-  \item {src/solver.cpp}, \hyperpage{40}
-  \item {src/util.cpp}, \hyperpage{42}
+    \subitem {decode\_and\_normalize}, \hyperpage{37}
+    \subitem {finalize}, \hyperpage{38}
+    \subitem {find\_equations}, \hyperpage{38}
+    \subitem {run}, \hyperpage{39}
+    \subitem {solve}, \hyperpage{40}
+  \item {src Directory Reference}, \hyperpage{15}
+  \item {src/bisect.cpp}, \hyperpage{47}
+  \item {src/cli.cpp}, \hyperpage{51}
+  \item {src/file\_io.cpp}, \hyperpage{51}
+  \item {src/main.cpp}, \hyperpage{53}
+  \item {src/solver.cpp}, \hyperpage{54}
+  \item {src/util.cpp}, \hyperpage{59}
   \item {Switch}
-    \subitem {cli}, \hyperpage{12}
+    \subitem {cli}, \hyperpage{17}
 
   \indexspace
 
   \item {type}
-    \subitem {Element}, \hyperpage{18}
+    \subitem {Element}, \hyperpage{24}
 
   \indexspace
 
   \item {update\_bisection\_output}
-    \subitem {bisect.cpp}, \hyperpage{37}
-    \subitem {bisect.hpp}, \hyperpage{22}
+    \subitem {bisect.cpp}, \hyperpage{50}
+    \subitem {bisect.hpp}, \hyperpage{30}
   \item {util.cpp}
-    \subitem {avg}, \hyperpage{43}
-    \subitem {current\_source\_only\_node}, \hyperpage{43}
-    \subitem {get\_number\_of\_unknowns}, \hyperpage{44}
-    \subitem {init\_vector}, \hyperpage{44}
-    \subitem {insert\_ground\_node\_equation}, \hyperpage{45}
-    \subitem {node\_key}, \hyperpage{45}
-    \subitem {parallel\_voltage\_sources}, \hyperpage{45}
-    \subitem {round\_to\_prec}, \hyperpage{46}
+    \subitem {avg}, \hyperpage{59}
+    \subitem {current\_source\_only\_node}, \hyperpage{60}
+    \subitem {get\_number\_of\_unknowns}, \hyperpage{60}
+    \subitem {init\_vector}, \hyperpage{61}
+    \subitem {insert\_ground\_node\_equation}, \hyperpage{61}
+    \subitem {node\_key}, \hyperpage{62}
+    \subitem {parallel\_voltage\_sources}, \hyperpage{63}
+    \subitem {round\_to\_prec}, \hyperpage{63}
   \item {util.hpp}
-    \subitem {avg}, \hyperpage{32}
-    \subitem {current\_source\_only\_node}, \hyperpage{32}
-    \subitem {get\_number\_of\_unknowns}, \hyperpage{32}
-    \subitem {init\_vector}, \hyperpage{33}
-    \subitem {insert\_ground\_node\_equation}, \hyperpage{33}
-    \subitem {node\_key}, \hyperpage{33}
-    \subitem {parallel\_voltage\_sources}, \hyperpage{34}
-    \subitem {power}, \hyperpage{34}
-    \subitem {round\_to\_prec}, \hyperpage{35}
+    \subitem {avg}, \hyperpage{42}
+    \subitem {current\_source\_only\_node}, \hyperpage{42}
+    \subitem {get\_number\_of\_unknowns}, \hyperpage{43}
+    \subitem {init\_vector}, \hyperpage{43}
+    \subitem {insert\_ground\_node\_equation}, \hyperpage{44}
+    \subitem {node\_key}, \hyperpage{44}
+    \subitem {parallel\_voltage\_sources}, \hyperpage{45}
+    \subitem {power}, \hyperpage{46}
+    \subitem {round\_to\_prec}, \hyperpage{46}
 
   \indexspace
 
   \item {v\_source}
-    \subitem {element.hpp}, \hyperpage{26}
+    \subitem {element.hpp}, \hyperpage{33}
   \item {v\_source\_currents\_map}
-    \subitem {Context}, \hyperpage{16}
+    \subitem {Context}, \hyperpage{22}
   \item {v\_type}
-    \subitem {GivenValue}, \hyperpage{19}
+    \subitem {GivenValue}, \hyperpage{25}
   \item {value}
-    \subitem {Element}, \hyperpage{18}
+    \subitem {Element}, \hyperpage{24}
   \item {ValueType}
-    \subitem {element.hpp}, \hyperpage{26}
+    \subitem {element.hpp}, \hyperpage{33}
   \item {variable\_elem}
-    \subitem {Context}, \hyperpage{16}
+    \subitem {Context}, \hyperpage{22}
   \item {voltage}
-    \subitem {Element}, \hyperpage{18}
-    \subitem {element.hpp}, \hyperpage{26}
+    \subitem {Element}, \hyperpage{24}
+    \subitem {element.hpp}, \hyperpage{33}
 
   \indexspace
 
   \item {write}
-    \subitem {file\_io.cpp}, \hyperpage{39}
-    \subitem {file\_io.hpp}, \hyperpage{27}
+    \subitem {file\_io.cpp}, \hyperpage{52}
+    \subitem {file\_io.hpp}, \hyperpage{35}
   \item {write\_element}
-    \subitem {file\_io.cpp}, \hyperpage{39}
-    \subitem {file\_io.hpp}, \hyperpage{28}
+    \subitem {file\_io.cpp}, \hyperpage{52}
+    \subitem {file\_io.hpp}, \hyperpage{36}
 
   \indexspace
 
   \item {ZERO\_TRESHOLD}
-    \subitem {constants}, \hyperpage{13}
+    \subitem {constants}, \hyperpage{19}
 
 \end{theindex}

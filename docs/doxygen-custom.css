@@ -981,7 +981,7 @@ div.center {
 }
 
 div.my_fragment {
-	font-size: x-large;
+	font-size: large;
 	direction: ltr;
 	overflow-x: auto;
 	overflow-y: hidden;

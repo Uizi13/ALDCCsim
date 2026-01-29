@@ -92,11 +92,11 @@ $(function(){initNavTree('index.html','',''); });
   <div class="headertitle"><div class="title">ALDCC Simulator </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_docs_2doxygen__readme"></a></p>
+<div class="textblock"><p><a class="anchor" id="main-page"></a></p>
 <p>ALDCCsim is a C++ command-line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found in:</h2>
-<div class="my_center"> <div class="my_fragment"> docs/detailed_description.md </div> </div><h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
+Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found on the <a class="el" href="details-page.html" title="Details">details</a> page</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 Features</h1>
 <ol type="1">
 <li><b>Modified Nodal Analysis (MNA)</b>: Handles both voltage and current sources by expanding the nodal matrix.</li>
@@ -105,18 +105,18 @@ Features</h1>
 <li><b>Error Detection</b>: Identifies invalid circuit topologies, such as parallel voltage sources or indeterminate nodes.</li>
 <li><b>Customizable Precision</b>: Configurable output precision for scientific and engineering requirements.</li>
 </ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Usage</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Command Line Arguments</h2>
 <div class="fragment"><div class="line">./ALDCCsim -i &lt;input_file&gt; -o &lt;output_file&gt; -p &lt;precision&gt;</div>
 </div><!-- fragment --><p> <span class="tt">-i</span>: Path to the input circuit file. <br  />
  <span class="tt">-o</span>: Path where results will be saved. <br  />
  <span class="tt">-p</span>: (optional) Number of decimal places for rounding (default: 4).</p>
 <p>The program has two modes of operation that are determined by the program internally based on contents of the input file: </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
 Basic mode</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Input</h3>
 <p>Each line of the input file should contain one <a class="el" href="struct_element.html" title="Element">element</a> along with nodes to which it is connected and a value. </p><div class="fragment"><div class="line">&lt;Type&gt; &lt;Node1&gt; &lt;Node2&gt; &lt;Value&gt;</div>
 </div><!-- fragment --><p> A node is every tree of wires separated from other nodes with elements. Nodes should be numbered arbitrarily starting from 1. </p><blockquote class="doxtable">
@@ -131,7 +131,7 @@ Input</h3>
 <li><b>J</b> denotes a current source</li>
 <li><b>R</b> denotes a resistor</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Example Input</h3>
 <p><img src="docs/images/example1.jpg" alt="" class="inline"/> </p><div class="fragment"><div class="line">E 1 2 4</div>
 <div class="line">R 2 3 16</div>
@@ -139,7 +139,7 @@ Example Input</h3>
 <div class="line">R 3 4 8</div>
 <div class="line">R 1 4 8</div>
 <div class="line">J 1 4 6</div>
-</div><!-- fragment --> <h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --> <h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 <blockquote class="doxtable">
 <p>Note: Because we marked the ground node on the left as node <span class="tt">1</span>, we can do the same on the right - they are effectively the same node.</p>
 </blockquote>
@@ -154,10 +154,10 @@ Example Input</h3>
 <div class="line">R 5 4 8</div>
 <div class="line">J 5 6 3</div>
 </div><!-- fragment --><p> Note: In this circuit we can model an ideal ammeter using a <span class="tt">0V</span> voltage source. </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 Search Mode (Bisection)</h2>
 <p>The simulator enters <b>Search Mode</b> when it detects a variable element and a target output value in the input file. This mode utilizes a bisection-based optimization engine to find the specific component value required to achieve a desired circuit state.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 Input</h3>
 <p>To use the simulator in this mode, one element must have its value replaced with an <span class="tt">x</span> symbol, and a target condition must be specified. The rest of the input file format is unchanged between basic mode and search mode.</p>
 <p>Variable element (exactly one should be present): </p><div class="fragment"><div class="line">&lt;Type&gt; &lt;Node1&gt; &lt;Node2&gt; x</div>
@@ -176,7 +176,7 @@ Input</h3>
 <blockquote class="doxtable">
 <p>Note: Variable element and the element with desired value specified can be the same element (see the third example below) </p>
 </blockquote>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 Example Bisection Input</h3>
 <p><img src="docs/images/example3.jpg" alt="" class="inline"/> </p><div class="fragment"><div class="line">E 1 2 10</div>
 <div class="line">R 2 3 x</div>
@@ -197,7 +197,7 @@ Example Bisection Input</h3>
 <div class="line">R 2 3 20</div>
 </div><!-- fragment --><p> The simulator will find the value of the current source between nodes 3 and 1 that results in 5.5W of power being supplied by it.</p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
 Output</h2>
 <p>The simulation results are written to the specified output file with the following sections:</p>
 <ol type="1">
@@ -206,26 +206,26 @@ Output</h2>
 <li><b>Node Potentials</b>: A list of the calculated potentials <span class="tt">V</span> for every node in the circuit (with node 1 always chosen as ground node).</li>
 </ol>
 <p>Values are rounded according to the specified precision (default: 4).</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
 Sign Convention</h3>
 <p>Values given in the <b>Element Table</b> are given in accordance to <b>passive sign convention</b> for <b>resistors</b> and <b>active sign convention</b> for <b>sources</b>. Each element's current is positive if it flows in the direction from the first node to the second.</p>
 <blockquote class="doxtable">
 <p>Example: If an element is described in the input file in the following way: <span class="tt">R 4 3 1.5</span>, the simulator will output its curent as <b>positive</b> if it flows <b>from node <span class="tt">4</span> to node <span class="tt">3</span></b>. </p>
 </blockquote>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
 Implementation Details</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
 1. Modified Nodal Analysis (MNA)</h3>
 <p>The solver constructs an augmented matrix <span class="tt">Ax = b</span>, where:</p><ul>
 <li><span class="tt">A</span> contains coefficients representing conductance values and voltage stamps.</li>
 <li><span class="tt">x</span> is the vector of unknown node potentials and voltage source currents.</li>
 <li><span class="tt">b</span> contains known source values.</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 2. Equation Solver</h3>
 <p>Gaussian elimination is performed on the matrix equation in order to solve for potentials and voltage source currents.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
 3. Bisection Algorithm</h3>
 <p>The optimization process follows these steps:</p>
 <ol type="1">
@@ -233,7 +233,7 @@ Implementation Details</h2>
 <li><b>Bound Finding</b>: It iteratively doubles the search range until the desired value is bracketed.</li>
 <li><b>Iteration</b>: The solver performs 50 iterations (<a class="el" href="namespaceconstants.html#abef9e7ac24ec4aedc071976c20c68b2b" title="constants::BISECTION_PREC">BISECTION_PREC</a>) to converge on the final component value with high precision.</li>
 </ol>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
 4. Error Handling and Validation</h3>
 <p>The program performs several topological checks before solving:</p>
 <ul>

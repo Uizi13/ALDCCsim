@@ -1,14 +1,12 @@
 \chapter{Details }
-\hypertarget{md_docs_2doxygen__detailed__documentation}{}\label{md_docs_2doxygen__detailed__documentation}\index{Details@{Details}}
-\label{md_docs_2doxygen__detailed__documentation_autotoc_md23}%
-\Hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md23}%
+\hypertarget{details-page}{}\label{details-page}\index{Details@{Details}}
+\label{details-page_md_docs_2doxygen__detailed__documentation}%
+\Hypertarget{details-page_md_docs_2doxygen__detailed__documentation}%
 
 
-a\{config\+\_\+file\}
-
-ALDCCsim is a C++ command-\/line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-\/based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md24}{}\doxysubsection{\texorpdfstring{Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the \protect\doxylink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} page}{Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the {main} page}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md24}
+ALDCCsim is a C++ command-\/line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-\/based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).\hypertarget{details-page_autotoc_md22}{}\doxysubsection{\texorpdfstring{Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the \protect\doxylink{index_main-page}{main} page}{Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the {main} page}}\label{details-page_autotoc_md22}
 \DoxyHorRuler{0}
-\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md26}{}\doxysection{\texorpdfstring{Problem and analysis}{Problem and analysis}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md26}
+\hypertarget{details-page_autotoc_md24}{}\doxysection{\texorpdfstring{Problem and analysis}{Problem and analysis}}\label{details-page_autotoc_md24}
 
 
 Based on the provided code and the task description image, the core problem is the development of a software simulation tool capable of analyzing linear direct current (DC) circuits. The fundamental objective is to parse a textual representation of a circuit, commonly referred to as a netlist, and calculate the steady-\/state operating point for every component. This involves determining the voltage across, current through, and power dissipated by each resistor, voltage source, and current source in the network.
@@ -19,8 +17,8 @@ Several improvements can be made on top of what the task specifies. I decided to
 
 The task mentions only solving a system with known element data and outputting currents, voltages and power balance, but in real use cases I found that I have to perform the opposite almost just as often. This is why I additionally implemented search mode which uses bisection to find some element parameter knowing one of the currents, voltages or power balances. The program still isn\textquotesingle{}t suitable for solving more elaborate problems, but this add-\/on makes its applicability significantly higher.
 
-I also decided to replace the {\ttfamily I} current source symbol from the task decription with {\ttfamily J} as it is more commonly used and can\textquotesingle{}t be misinterpretted as current.\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md27}{}\doxysection{\texorpdfstring{Internal specification}{Internal specification}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md27}
-\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md28}{}\doxysubsection{\texorpdfstring{Global Context}{Global Context}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md28}
+I also decided to replace the {\ttfamily I} current source symbol from the task decription with {\ttfamily J} as it is more commonly used and can\textquotesingle{}t be misinterpretted as current.\hypertarget{details-page_autotoc_md25}{}\doxysection{\texorpdfstring{Internal specification}{Internal specification}}\label{details-page_autotoc_md25}
+\hypertarget{details-page_autotoc_md26}{}\doxysubsection{\texorpdfstring{Global Context}{Global Context}}\label{details-page_autotoc_md26}
 The simulation state is aggregated into a central data structure, \doxylink{struct_context}{Context}, which serves as the primary data transfer object between modules.
 
 
@@ -28,8 +26,8 @@ The simulation state is aggregated into a central data structure, \doxylink{stru
 \item Element Storage:\+ All circuit components are stored in a std::\+vector\texorpdfstring{$<$}{<}\doxylink{struct_element}{Element}\texorpdfstring{$>$}{>}, where each Element contains its type, connection nodes, value, and computed results (voltage, current, power).
 \item Equation System:\+ The MNA system is represented by an augmented matrix (std::\+vector$<$std::\+vector$<$double$>$$>$ equations), where the number of unknowns corresponds to the maximum node index plus the number of independent voltage sources.
 \item Bisection State:\+ To support the optimization mode, the context holds a pointer to a variable\+\_\+elem (the component being tuned) and a \doxylink{struct_given_value}{Given\+Value} structure defining the target metric (desired\+\_\+value) and type (v\+\_\+type).
-\end{DoxyItemize}\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md29}{}\doxysubsection{\texorpdfstring{Mathematical Core}{Mathematical Core}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md29}
-\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md30}{}\doxysubsubsection{\texorpdfstring{Modified Nodal Analysis (MNA)}{Modified Nodal Analysis (MNA)}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md30}
+\end{DoxyItemize}\hypertarget{details-page_autotoc_md27}{}\doxysubsection{\texorpdfstring{Mathematical Core}{Mathematical Core}}\label{details-page_autotoc_md27}
+\hypertarget{details-page_autotoc_md28}{}\doxysubsubsection{\texorpdfstring{Modified Nodal Analysis (MNA)}{Modified Nodal Analysis (MNA)}}\label{details-page_autotoc_md28}
 The solver constructs a linear system {\ttfamily Ax=b} to determine the circuit state.
 
 Equation Formulation:\+
@@ -42,19 +40,19 @@ Equation Formulation:\+
 Matrix Solution:\+
 \begin{DoxyItemize}
 \item The system is solved using Gaussian elimination with partial pivoting to maximize numerical stability before decoding the results into node potentials and source currents.
-\end{DoxyItemize}\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md31}{}\doxysubsubsection{\texorpdfstring{Bisection Optimization}{Bisection Optimization}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md31}
+\end{DoxyItemize}\hypertarget{details-page_autotoc_md29}{}\doxysubsubsection{\texorpdfstring{Bisection Optimization}{Bisection Optimization}}\label{details-page_autotoc_md29}
 When a variable element is detected, the bisect module wraps the MNA solver in an iterative loop.
 \begin{DoxyItemize}
 \item Monotonicity Check:\+ The variable element is perturbed by EPSILON (2E-\/10) to determine the sign of the derivative of the output with respect to the input.
 \item Bound Search:\+ The search interval is iteratively doubled until the target value is bracketed by the output range.
 \item Convergence:\+ The algorithm performs a fixed number of iterations (BISECTION\+\_\+\+PREC = 50) to narrow the interval, updating the output\+\_\+value in the \doxylink{struct_context}{Context} after every step.
-\end{DoxyItemize}\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md32}{}\doxysubsection{\texorpdfstring{Validation and Error Handling}{Validation and Error Handling}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md32}
+\end{DoxyItemize}\hypertarget{details-page_autotoc_md30}{}\doxysubsection{\texorpdfstring{Validation and Error Handling}{Validation and Error Handling}}\label{details-page_autotoc_md30}
 The system includes pre-\/solve validation to reject topologically invalid circuits:\+
 \begin{DoxyItemize}
 \item Indeterminate Nodes:\+ Detects nodes connected exclusively to current sources, which result in undefined node potentials.
 \item Parallel Voltage Sources:\+ Identifies voltage sources sharing the same node pair, which creates a singular matrix due to indeterminate loop currents.
 \item Singular Matrices:\+ The Gaussian elimination process throws a runtime error if inconsistent or dependent equations (e.\+g., 0 = non-\/zero) are encountered.
-\end{DoxyItemize}\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md33}{}\doxysubsection{\texorpdfstring{Output Generation}{Output Generation}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md33}
+\end{DoxyItemize}\hypertarget{details-page_autotoc_md31}{}\doxysubsection{\texorpdfstring{Output Generation}{Output Generation}}\label{details-page_autotoc_md31}
 The simulator writes a comprehensive report to the specified output file.
 \begin{DoxyItemize}
 \item Element Table:\+ Lists every element\textquotesingle{}s type, nodes, and calculated Voltage (U), Current (I), and Power (P).
@@ -63,8 +61,8 @@ The simulator writes a comprehensive report to the specified output file.
 \end{DoxyItemize}
 
 \DoxyHorRuler{0}
-\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md35}{}\doxysection{\texorpdfstring{Testing -\/ Basic Mode}{Testing -\/ Basic Mode}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md35}
-\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md36}{}\doxysubsection{\texorpdfstring{Example 1}{Example 1}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md36}
+\hypertarget{details-page_autotoc_md33}{}\doxysection{\texorpdfstring{Testing -\/ Basic Mode}{Testing -\/ Basic Mode}}\label{details-page_autotoc_md33}
+\hypertarget{details-page_autotoc_md34}{}\doxysubsection{\texorpdfstring{Example 1}{Example 1}}\label{details-page_autotoc_md34}
 
 
 Command:\+ {\ttfamily ALDCCsim.\+exe -\/i data.\+txt -\/o solution.\+txt -\/p 5}
@@ -105,7 +103,7 @@ solution.\+txt:\+
 
 \end{DoxyCode}
  \DoxyHorRuler{0}
- \hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md38}{}\doxysubsection{\texorpdfstring{Example 2}{Example 2}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md38}
+ \hypertarget{details-page_autotoc_md36}{}\doxysubsection{\texorpdfstring{Example 2}{Example 2}}\label{details-page_autotoc_md36}
 
 
 Command:\+ {\ttfamily ALDCCsim.\+exe -\/i data.\+txt -\/o solution.\+txt}
@@ -154,8 +152,8 @@ solution.\+txt:\+
 
 \end{DoxyCode}
  \DoxyHorRuler{0}
- \hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md40}{}\doxysection{\texorpdfstring{Testing -\/ Search Mode}{Testing -\/ Search Mode}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md40}
-\hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md41}{}\doxysubsection{\texorpdfstring{Example 1}{Example 1}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md41}
+ \hypertarget{details-page_autotoc_md38}{}\doxysection{\texorpdfstring{Testing -\/ Search Mode}{Testing -\/ Search Mode}}\label{details-page_autotoc_md38}
+\hypertarget{details-page_autotoc_md39}{}\doxysubsection{\texorpdfstring{Example 1}{Example 1}}\label{details-page_autotoc_md39}
 
 
 Command:\+ {\ttfamily ALDCCsim.\+exe -\/i data.\+txt -\/o solution.\+txt}
@@ -186,7 +184,7 @@ solution.\+txt:\+
 \DoxyCodeLine{\ \ 3\ \ \ |\ \ \ \ \ \ \ \ \ \ \ \ \ 5\ }
 
 \end{DoxyCode}
- \hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md42}{}\doxysubsection{\texorpdfstring{Example 2}{Example 2}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md42}
+ \hypertarget{details-page_autotoc_md40}{}\doxysubsection{\texorpdfstring{Example 2}{Example 2}}\label{details-page_autotoc_md40}
 
 
 Command:\+ {\ttfamily ALDCCsim.\+exe -\/i data.\+txt -\/o solution.\+txt -\/p 7}
@@ -266,7 +264,7 @@ solution.\+txt:\+
 
 \end{DoxyCode}
  \DoxyHorRuler{0}
- \hypertarget{md_docs_2doxygen__detailed__documentation_autotoc_md44}{}\doxysubsection{\texorpdfstring{Example 3}{Example 3}}\label{md_docs_2doxygen__detailed__documentation_autotoc_md44}
+ \hypertarget{details-page_autotoc_md42}{}\doxysubsection{\texorpdfstring{Example 3}{Example 3}}\label{details-page_autotoc_md42}
 
 
 Command:\+ {\ttfamily ALDCCsim.\+exe -\/i data.\+txt -\/o solution.\+txt -\/p 7}

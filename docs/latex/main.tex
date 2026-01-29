@@ -1,11 +1,8 @@
 \chapter{ALDCC Simulator }
-\hypertarget{index}{}\label{index}\index{ALDCC Simulator@{ALDCC Simulator}}
-\label{index_main-page}%
-\Hypertarget{index_main-page}%
-
-
-ALDCCsim is a C++ command-\/line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-\/based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).\hypertarget{index_autotoc_md0}{}\doxysubsection{\texorpdfstring{Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found on the \protect\doxysectlink{details-page}{details}{0} page}{Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found on the {details} page}}\label{index_autotoc_md0}
-\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md1}
+\hypertarget{main}{}\label{main}\index{ALDCC Simulator@{ALDCC Simulator}}
+\hypertarget{main_autotoc_md0}{}\doxysection{\texorpdfstring{ALDCC Simulator}{ALDCC Simulator}}\label{main_autotoc_md0}
+ALDCCsim is a C++ command-\/line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-\/based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).\hypertarget{main_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found on the \protect\doxysectlink{details}{details}{0} page}{Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found on the {details} page}}\label{main_autotoc_md1}
+\hypertarget{main_autotoc_md2}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{main_autotoc_md2}
 
 \begin{DoxyEnumerate}
 \item {\bfseries{Modified Nodal Analysis (MNA)}}:\+ Handles both voltage and current sources by expanding the nodal matrix.
@@ -13,8 +10,8 @@ ALDCCsim is a C++ command-\/line tool designed to solve linear electrical circui
 \item {\bfseries{Robust Linear Solver}}:\+ Uses Gaussian elimination with partial pivoting for numerical stability.
 \item {\bfseries{Error Detection}}:\+ Identifies invalid circuit topologies, such as parallel voltage sources or indeterminate nodes.
 \item {\bfseries{Customizable Precision}}:\+ Configurable output precision for scientific and engineering requirements.
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{index_autotoc_md2}
-\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Command Line Arguments}{Command Line Arguments}}\label{index_autotoc_md3}
+\end{DoxyEnumerate}\hypertarget{main_autotoc_md3}{}\doxysubsection{\texorpdfstring{Usage}{Usage}}\label{main_autotoc_md3}
+\hypertarget{main_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Command Line Arguments}{Command Line Arguments}}\label{main_autotoc_md4}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{./ALDCCsim\ -\/i\ <input\_file>\ -\/o\ <output\_file>\ -\/p\ <precision>}
@@ -24,8 +21,8 @@ ALDCCsim is a C++ command-\/line tool designed to solve linear electrical circui
  {\ttfamily -\/o}:\+ Path where results will be saved. ~\newline
  {\ttfamily -\/p}:\+ (optional) Number of decimal places for rounding (default:\+ 4).
 
-The program has two modes of operation that are determined by the program internally based on contents of the input file:\+ \hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Basic mode}{Basic mode}}\label{index_autotoc_md4}
-\hypertarget{index_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Input}{Input}}\label{index_autotoc_md5}
+The program has two modes of operation that are determined by the program internally based on contents of the input file:\+ \hypertarget{main_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Basic mode}{Basic mode}}\label{main_autotoc_md5}
+\hypertarget{main_autotoc_md6}{}\doxysubsubsubsection{\texorpdfstring{Input}{Input}}\label{main_autotoc_md6}
 Each line of the input file should contain one \doxylink{struct_element}{element} along with nodes to which it is connected and a value. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{<Type>\ <Node1>\ <Node2>\ <Value>}
@@ -45,7 +42,7 @@ Note:\+ The order of nodes is important for specifying in which direction source
 \item {\bfseries{E}} denotes a voltage source
 \item {\bfseries{J}} denotes a current source
 \item {\bfseries{R}} denotes a resistor
-\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Example Input}{Example Input}}\label{index_autotoc_md6}
+\end{DoxyItemize}\hypertarget{main_autotoc_md7}{}\doxysubsubsubsection{\texorpdfstring{Example Input}{Example Input}}\label{main_autotoc_md7}
  
 \begin{DoxyCode}{0}
 \DoxyCodeLine{E\ 1\ 2\ 4}
@@ -56,11 +53,11 @@ Note:\+ The order of nodes is important for specifying in which direction source
 \DoxyCodeLine{J\ 1\ 4\ 6}
 
 \end{DoxyCode}
- \hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{\begin{quote}
+ \hypertarget{main_autotoc_md8}{}\doxysubsection{\texorpdfstring{\begin{quote}
 Note:\+ Because we marked the ground node on the left as node {\ttfamily 1}, we can do the same on the right -\/ they are effectively the same node.\end{quote}
 }{\begin{quote}
 Note:\+ Because we marked the ground node on the left as node {\ttfamily 1}, we can do the same on the right -\/ they are effectively the same node.\end{quote}
-}}\label{index_autotoc_md7}
+}}\label{main_autotoc_md8}
  
 \begin{DoxyCode}{0}
 \DoxyCodeLine{R\ 2\ 1\ 4}
@@ -74,8 +71,8 @@ Note:\+ Because we marked the ground node on the left as node {\ttfamily 1}, we 
 \DoxyCodeLine{J\ 5\ 6\ 3}
 
 \end{DoxyCode}
- Note:\+ In this circuit we can model an ideal ammeter using a {\ttfamily 0V} voltage source. \hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{Search Mode (Bisection)}{Search Mode (Bisection)}}\label{index_autotoc_md8}
-The simulator enters {\bfseries{Search Mode}} when it detects a variable element and a target output value in the input file. This mode utilizes a bisection-\/based optimization engine to find the specific component value required to achieve a desired circuit state.\hypertarget{index_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{Input}{Input}}\label{index_autotoc_md9}
+ Note:\+ In this circuit we can model an ideal ammeter using a {\ttfamily 0V} voltage source. \hypertarget{main_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{Search Mode (Bisection)}{Search Mode (Bisection)}}\label{main_autotoc_md9}
+The simulator enters {\bfseries{Search Mode}} when it detects a variable element and a target output value in the input file. This mode utilizes a bisection-\/based optimization engine to find the specific component value required to achieve a desired circuit state.\hypertarget{main_autotoc_md10}{}\doxysubsubsubsection{\texorpdfstring{Input}{Input}}\label{main_autotoc_md10}
 To use the simulator in this mode, one element must have its value replaced with an {\ttfamily x} symbol, and a target condition must be specified. The rest of the input file format is unchanged between basic mode and search mode.
 
 Variable element (exactly one should be present):\+ 
@@ -108,7 +105,7 @@ Example:\+ {\ttfamily E 1 2 30 P 10}. First 4 values specify the element (see in
 
 \begin{quote}
 Note:\+ Variable element and the element with desired value specified can be the same element (see the third example below) \end{quote}
-\hypertarget{index_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{Example Bisection Input}{Example Bisection Input}}\label{index_autotoc_md10}
+\hypertarget{main_autotoc_md11}{}\doxysubsubsubsection{\texorpdfstring{Example Bisection Input}{Example Bisection Input}}\label{main_autotoc_md11}
  
 \begin{DoxyCode}{0}
 \DoxyCodeLine{E\ 1\ 2\ 10}
@@ -143,7 +140,7 @@ Note:\+ Variable element and the element with desired value specified can be the
  The simulator will find the value of the current source between nodes 3 and 1 that results in 5.\+5W of power being supplied by it.
 
 \DoxyHorRuler{0}
-\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{Output}{Output}}\label{index_autotoc_md14}
+\hypertarget{main_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{Output}{Output}}\label{main_autotoc_md15}
 The simulation results are written to the specified output file with the following sections:\+
 
 
@@ -153,7 +150,7 @@ The simulation results are written to the specified output file with the followi
 \item {\bfseries{Node Potentials}}:\+ A list of the calculated potentials {\ttfamily V} for every node in the circuit (with node 1 always chosen as ground node).
 \end{DoxyEnumerate}
 
-Values are rounded according to the specified precision (default:\+ 4).\hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{Sign Convention}{Sign Convention}}\label{index_autotoc_md15}
+Values are rounded according to the specified precision (default:\+ 4).\hypertarget{main_autotoc_md16}{}\doxysubsubsubsection{\texorpdfstring{Sign Convention}{Sign Convention}}\label{main_autotoc_md16}
 Values given in the {\bfseries{Element Table}} are given in accordance to {\bfseries{passive sign convention}} for {\bfseries{resistors}} and {\bfseries{active sign convention}} for {\bfseries{sources}}. Each element\textquotesingle{}s current is positive if it flows in the direction from the first node to the second.
 
 \begin{quote}
@@ -161,15 +158,15 @@ Example:\+ If an element is described in the input file in the following way:\+ 
 
 
 \DoxyHorRuler{0}
-\hypertarget{index_autotoc_md17}{}\doxysubsection{\texorpdfstring{Implementation Details}{Implementation Details}}\label{index_autotoc_md17}
-\hypertarget{index_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{1. Modified Nodal Analysis (MNA)}{1. Modified Nodal Analysis (MNA)}}\label{index_autotoc_md18}
+\hypertarget{main_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{Implementation Details}{Implementation Details}}\label{main_autotoc_md18}
+\hypertarget{main_autotoc_md19}{}\doxysubsubsubsection{\texorpdfstring{1. Modified Nodal Analysis (MNA)}{1. Modified Nodal Analysis (MNA)}}\label{main_autotoc_md19}
 The solver constructs an augmented matrix {\ttfamily Ax = b}, where:\+
 \begin{DoxyItemize}
 \item {\ttfamily A} contains coefficients representing conductance values and voltage stamps.
 \item {\ttfamily x} is the vector of unknown node potentials and voltage source currents.
 \item {\ttfamily b} contains known source values.
-\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxysubsubsection{\texorpdfstring{2. Equation Solver}{2. Equation Solver}}\label{index_autotoc_md19}
-Gaussian elimination is performed on the matrix equation in order to solve for potentials and voltage source currents.\hypertarget{index_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{3. Bisection Algorithm}{3. Bisection Algorithm}}\label{index_autotoc_md20}
+\end{DoxyItemize}\hypertarget{main_autotoc_md20}{}\doxysubsubsubsection{\texorpdfstring{2. Equation Solver}{2. Equation Solver}}\label{main_autotoc_md20}
+Gaussian elimination is performed on the matrix equation in order to solve for potentials and voltage source currents.\hypertarget{main_autotoc_md21}{}\doxysubsubsubsection{\texorpdfstring{3. Bisection Algorithm}{3. Bisection Algorithm}}\label{main_autotoc_md21}
 The optimization process follows these steps:\+
 
 
@@ -177,7 +174,7 @@ The optimization process follows these steps:\+
 \item {\bfseries{Derivative Sign Detection}}:\+ The simulator perturbs the variable element by a small value to determine if the output increases or decreases.
 \item {\bfseries{Bound Finding}}:\+ It iteratively doubles the search range until the desired value is bracketed.
 \item {\bfseries{Iteration}}:\+ The solver performs 50 iterations (\doxylink{namespaceconstants_abef9e7ac24ec4aedc071976c20c68b2b}{BISECTION\+\_\+\+PREC}) to converge on the final component value with high precision.
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{4. Error Handling and Validation}{4. Error Handling and Validation}}\label{index_autotoc_md21}
+\end{DoxyEnumerate}\hypertarget{main_autotoc_md22}{}\doxysubsubsubsection{\texorpdfstring{4. Error Handling and Validation}{4. Error Handling and Validation}}\label{main_autotoc_md22}
 The program performs several topological checks before solving:\+
 
 

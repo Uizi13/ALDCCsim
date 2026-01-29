@@ -25,53 +25,53 @@
 var NAVTREE =
 [
   [ "ALDCC simulator", "index.html", [
-    [ "Features", "index.html#autotoc_md2", null ],
-    [ "Usage", "index.html#autotoc_md3", [
-      [ "Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found in:", "index.html#autotoc_md1", null ],
-      [ "Command Line Arguments", "index.html#autotoc_md4", null ],
-      [ "Basic mode", "index.html#autotoc_md5", [
-        [ "Input", "index.html#autotoc_md6", null ],
-        [ "Example Input", "index.html#autotoc_md7", null ]
+    [ "Features", "index.html#autotoc_md1", null ],
+    [ "Usage", "index.html#autotoc_md2", [
+      [ "Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found on the <a class=\"el\" href=\"details-page.html\" title=\"Details\">details</a> page", "index.html#autotoc_md0", null ],
+      [ "Command Line Arguments", "index.html#autotoc_md3", null ],
+      [ "Basic mode", "index.html#autotoc_md4", [
+        [ "Input", "index.html#autotoc_md5", null ],
+        [ "Example Input", "index.html#autotoc_md6", null ]
       ] ]
     ] ],
     [ "<blockquote class=\"doxtable\">
 <p>Note: Because we marked the ground node on the left as node <span class=\"tt\">1</span>, we can do the same on the right - they are effectively the same node.</p>
 </blockquote>
-", "index.html#autotoc_md8", [
-      [ "Search Mode (Bisection)", "index.html#autotoc_md9", [
-        [ "Input", "index.html#autotoc_md10", null ],
-        [ "Example Bisection Input", "index.html#autotoc_md11", null ]
+", "index.html#autotoc_md7", [
+      [ "Search Mode (Bisection)", "index.html#autotoc_md8", [
+        [ "Input", "index.html#autotoc_md9", null ],
+        [ "Example Bisection Input", "index.html#autotoc_md10", null ]
       ] ],
-      [ "Output", "index.html#autotoc_md15", [
-        [ "Sign Convention", "index.html#autotoc_md16", null ]
+      [ "Output", "index.html#autotoc_md14", [
+        [ "Sign Convention", "index.html#autotoc_md15", null ]
       ] ],
-      [ "Implementation Details", "index.html#autotoc_md18", [
-        [ "1. Modified Nodal Analysis (MNA)", "index.html#autotoc_md19", null ],
-        [ "2. Equation Solver", "index.html#autotoc_md20", null ],
-        [ "3. Bisection Algorithm", "index.html#autotoc_md21", null ],
-        [ "4. Error Handling and Validation", "index.html#autotoc_md22", null ]
+      [ "Implementation Details", "index.html#autotoc_md17", [
+        [ "1. Modified Nodal Analysis (MNA)", "index.html#autotoc_md18", null ],
+        [ "2. Equation Solver", "index.html#autotoc_md19", null ],
+        [ "3. Bisection Algorithm", "index.html#autotoc_md20", null ],
+        [ "4. Error Handling and Validation", "index.html#autotoc_md21", null ]
       ] ]
     ] ],
-    [ "Details", "md_docs_2doxygen__detailed__documentation.html", [
-      [ "Problem and analysis", "md_docs_2doxygen__detailed__documentation.html#autotoc_md26", null ],
-      [ "Internal specification", "md_docs_2doxygen__detailed__documentation.html#autotoc_md27", [
-        [ "Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the readme in root directory <span class=\"tt\">../README.md</span>", "md_docs_2doxygen__detailed__documentation.html#autotoc_md24", null ],
-        [ "Global Context", "md_docs_2doxygen__detailed__documentation.html#autotoc_md28", null ],
-        [ "Mathematical Core", "md_docs_2doxygen__detailed__documentation.html#autotoc_md29", [
-          [ "Modified Nodal Analysis (MNA)", "md_docs_2doxygen__detailed__documentation.html#autotoc_md30", null ],
-          [ "Bisection Optimization", "md_docs_2doxygen__detailed__documentation.html#autotoc_md31", null ]
+    [ "Details", "details-page.html", [
+      [ "Problem and analysis", "details-page.html#autotoc_md24", null ],
+      [ "Internal specification", "details-page.html#autotoc_md25", [
+        [ "Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the <a class=\"el\" href=\"index.html#main-page\" title=\"ALDCC Simulator\">main</a> page", "details-page.html#autotoc_md22", null ],
+        [ "Global Context", "details-page.html#autotoc_md26", null ],
+        [ "Mathematical Core", "details-page.html#autotoc_md27", [
+          [ "Modified Nodal Analysis (MNA)", "details-page.html#autotoc_md28", null ],
+          [ "Bisection Optimization", "details-page.html#autotoc_md29", null ]
         ] ],
-        [ "Validation and Error Handling", "md_docs_2doxygen__detailed__documentation.html#autotoc_md32", null ],
-        [ "Output Generation", "md_docs_2doxygen__detailed__documentation.html#autotoc_md33", null ]
+        [ "Validation and Error Handling", "details-page.html#autotoc_md30", null ],
+        [ "Output Generation", "details-page.html#autotoc_md31", null ]
       ] ],
-      [ "Testing - Basic Mode", "md_docs_2doxygen__detailed__documentation.html#autotoc_md35", [
-        [ "Example 1", "md_docs_2doxygen__detailed__documentation.html#autotoc_md36", null ],
-        [ "Example 2", "md_docs_2doxygen__detailed__documentation.html#autotoc_md38", null ]
+      [ "Testing - Basic Mode", "details-page.html#autotoc_md33", [
+        [ "Example 1", "details-page.html#autotoc_md34", null ],
+        [ "Example 2", "details-page.html#autotoc_md36", null ]
       ] ],
-      [ "Testing - Search Mode", "md_docs_2doxygen__detailed__documentation.html#autotoc_md40", [
-        [ "Example 1", "md_docs_2doxygen__detailed__documentation.html#autotoc_md41", null ],
-        [ "Example 2", "md_docs_2doxygen__detailed__documentation.html#autotoc_md42", null ],
-        [ "Example 3", "md_docs_2doxygen__detailed__documentation.html#autotoc_md44", null ]
+      [ "Testing - Search Mode", "details-page.html#autotoc_md38", [
+        [ "Example 1", "details-page.html#autotoc_md39", null ],
+        [ "Example 2", "details-page.html#autotoc_md40", null ],
+        [ "Example 3", "details-page.html#autotoc_md42", null ]
       ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [

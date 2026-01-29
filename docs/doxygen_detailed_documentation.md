@@ -1,13 +1,13 @@
-# Details
+# Details {#details-page}
 
 ALDCCsim is a C++ command-line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).
 
-### Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the readme in root directory `../README.md`
+### Below is a full description of the program focusing on Analysis, Internal Specification and Testing. For External Specification read the [main](@ref main-page) page
 
 ---
 
 ## Problem and analysis
-![](images/aldcc-task-1.jpg)
+![](../images/aldcc-task-2.jpg)
 
 Based on the provided code and the task description image, the core problem is the development of a software simulation tool capable of analyzing linear direct current (DC) circuits.
 The fundamental objective is to parse a textual representation of a circuit, commonly referred to as a netlist, and calculate the steady-state operating point for every component.
@@ -54,7 +54,7 @@ Matrix Solution:
 #### Bisection Optimization
 
 When a variable element is detected, the bisect module wraps the MNA solver in an iterative loop.
-- Monotonicity Check: The variable element is perturbed by [EPSILON](@ref EPSILON) (2E−10) to determine the sign of the derivative of the output with respect to the input.
+- Monotonicity Check: The variable element is perturbed by [EPSILON](@ref EPSILON) (2E-10) to determine the sign of the derivative of the output with respect to the input.
 - Bound Search: The search interval is iteratively doubled until the target value is bracketed by the output range.
 - Convergence: The algorithm performs a fixed number of iterations ([BISECTION_PREC](@ref BISECTION_PREC) = 50) to narrow the interval, updating the [output_value](@ref output_value) in the [Context](@ref Context) after every step.
 
@@ -77,7 +77,7 @@ The simulator writes a comprehensive report to the specified output file.
 ## Testing - Basic Mode
 ### Example 1
 
-![](images/example1.jpg)
+![](../images/example1.jpg)
 
 Command:
 `ALDCCsim.exe -i data.txt -o solution.txt -p 5`
@@ -115,7 +115,7 @@ solution.txt:
 ---
 ### Example 2
 
-![](images/example2.jpg)
+![](../images/example2.jpg)
 
 Command:
 `ALDCCsim.exe -i data.txt -o solution.txt`
@@ -162,7 +162,7 @@ solution.txt:
 ## Testing - Search Mode
 ### Example 1
 
-![](images/example3.jpg)
+![](../images/example3.jpg)
 
 Command:
 `ALDCCsim.exe -i data.txt -o solution.txt`
@@ -192,7 +192,7 @@ Answer: x = 50
 ```
 ### Example 2
 
-![](images/example4.jpg)
+![](../images/example4.jpg)
 
 Command:
 `ALDCCsim.exe -i data.txt -o solution.txt -p 7`
@@ -268,7 +268,7 @@ Answer: x = 11.927
 ---
 ### Example 3
 
-![](images/example5.jpg)
+![](../images/example5.jpg)
 
 Command:
 `ALDCCsim.exe -i data.txt -o solution.txt -p 7`

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['2_0',['2',['../md_docs_2doxygen__detailed__documentation.html#autotoc_md38',1,'Example 2'],['../md_docs_2doxygen__detailed__documentation.html#autotoc_md42',1,'Example 2']]],
-  ['2_20equation_20solver_1',['2. Equation Solver',['../index.html#autotoc_md20',1,'']]]
+  ['2_0',['2',['../details-page.html#autotoc_md36',1,'Example 2'],['../details-page.html#autotoc_md40',1,'Example 2']]],
+  ['2_20equation_20solver_1',['2. Equation Solver',['../index.html#autotoc_md19',1,'']]]
 ];

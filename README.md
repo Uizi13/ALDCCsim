@@ -2,8 +2,7 @@
 
 ALDCCsim is a C++ command-line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).
 
-### Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found in:
-docs/detailed_description.md
+### Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found in `docs/README.md`
 
 ## Features
 
