@@ -7,7 +7,6 @@ ALDCCsim is a C++ command-line tool designed to solve linear electrical circuits
 ---
 
 ## Problem and analysis
-
 ![](images/aldcc-task-1.jpg)
 
 Based on the provided code and the task description image, the core problem is the development of a software simulation tool capable of analyzing linear direct current (DC) circuits.
@@ -32,7 +31,6 @@ The program still isn't suitable for solving more elaborate problems, but this a
 I also decided to replace the `I` current source symbol from the task decription with `J` as it is more commonly used and can't be misinterpretted as current.
 
 ## Internal specification
-
 ### Global Context
 The simulation state is aggregated into a central data structure, [Context](@ref Context), which serves as the primary data transfer object between modules.
 
@@ -41,7 +39,6 @@ The simulation state is aggregated into a central data structure, [Context](@ref
 - Bisection State: To support the optimization mode, the context holds a pointer to a [variable_elem](@ref variable_elem) (the component being tuned) and a [GivenValue](@ref GivenValue) structure defining the target metric (desired_value) and type (v_type).
 
 ### Mathematical Core
-
 #### Modified Nodal Analysis (MNA)
 
 The solver constructs a linear system `Ax=b` to determine the circuit state.
@@ -78,7 +75,6 @@ The simulator writes a comprehensive report to the specified output file.
 ---
 
 ## Testing - Basic Mode
-
 ### Example 1
 
 ![](images/example1.jpg)
