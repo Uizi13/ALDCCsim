@@ -93,7 +93,7 @@ Target condition (can be specified alongside any element to which it should appl
 - **Current (`I`)**: Target current through an element.
 - **Power (`P`)**: Target power dissipated/supplied(depending on the sign) by an element.
 
-> Example: `E 1 2 30 P 10`. First 4 values specify the element (see [input](#input)) and 'P 10' define how much power is supposed to be supplied/absorbed (see [sign convention](#sign-convention)) by this element.
+> Example: `E 1 2 30 P 10`. First 4 values specify the element (see [input](#input)) and `P 10` define how much power is supposed to be supplied/absorbed (see [sign convention](#sign-convention)) by this element.
 
 > Note: Variable element and the element with desired value specified can be the same element (see the third example below)
 
