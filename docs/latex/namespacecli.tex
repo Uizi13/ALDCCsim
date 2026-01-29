@@ -1,0 +1,104 @@
+\doxysection{cli Namespace Reference}
+\hypertarget{namespacecli}{}\label{namespacecli}\index{cli@{cli}}
+
+
+Contains functions and structures for command-\/line argument parsing.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structcli_1_1_input}{Input}}
+\begin{DoxyCompactList}\small\item\em Holds the parsed command-\/line input values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973e}{Switch}} \{ \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973ea334c4a4c42fdb79d7ebc3e73b517e6f8}{none}} = 0
+, \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973ea13b5bfe96f3e2fe411c9f66f4a582adf}{in}} = \textquotesingle{}i\textquotesingle{}
+, \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973eac68271a63ddbc431c307beb7d2918275}{out}} = \textquotesingle{}o\textquotesingle{}
+, \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973eae81f51b496552d5548d2739e87daf131}{prec}} = \textquotesingle{}p\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the valid command-\/line switches for the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structcli_1_1_input}{Input}} \doxymbox{\hyperlink{namespacecli_a12ec60634710a096b3d2f50ecead7644}{parse}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Parses the command line arguments to extract input file, output file, and precision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains functions and structures for command-\/line argument parsing. 
+
+\label{doc-enum-members}
+\Hypertarget{namespacecli_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespacecli_aed3160a32556ffae625dfb49b20b973e}\index{cli@{cli}!Switch@{Switch}}
+\index{Switch@{Switch}!cli@{cli}}
+\doxysubsubsection{\texorpdfstring{Switch}{Switch}}
+{\footnotesize\ttfamily \label{namespacecli_aed3160a32556ffae625dfb49b20b973e} 
+enum class \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973e}{cli::\+\+Switch}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Defines the valid command-\/line switches for the program. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!cli@{cli}}
+\index{cli@{cli}!none@{none}}
+}\Hypertarget{namespacecli_aed3160a32556ffae625dfb49b20b973ea334c4a4c42fdb79d7ebc3e73b517e6f8}\label{namespacecli_aed3160a32556ffae625dfb49b20b973ea334c4a4c42fdb79d7ebc3e73b517e6f8} 
+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{in@{in}!cli@{cli}}
+\index{cli@{cli}!in@{in}}
+}\Hypertarget{namespacecli_aed3160a32556ffae625dfb49b20b973ea13b5bfe96f3e2fe411c9f66f4a582adf}\label{namespacecli_aed3160a32556ffae625dfb49b20b973ea13b5bfe96f3e2fe411c9f66f4a582adf} 
+in&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{out@{out}!cli@{cli}}
+\index{cli@{cli}!out@{out}}
+}\Hypertarget{namespacecli_aed3160a32556ffae625dfb49b20b973eac68271a63ddbc431c307beb7d2918275}\label{namespacecli_aed3160a32556ffae625dfb49b20b973eac68271a63ddbc431c307beb7d2918275} 
+out&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{prec@{prec}!cli@{cli}}
+\index{cli@{cli}!prec@{prec}}
+}\Hypertarget{namespacecli_aed3160a32556ffae625dfb49b20b973eae81f51b496552d5548d2739e87daf131}\label{namespacecli_aed3160a32556ffae625dfb49b20b973eae81f51b496552d5548d2739e87daf131} 
+prec&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacecli_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecli_a12ec60634710a096b3d2f50ecead7644}\index{cli@{cli}!parse@{parse}}
+\index{parse@{parse}!cli@{cli}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{namespacecli_a12ec60634710a096b3d2f50ecead7644} 
+\doxymbox{\hyperlink{structcli_1_1_input}{Input}} cli::\+parse (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Parses the command line arguments to extract input file, output file, and precision. 
+
+It checks for the \textquotesingle{}-\/i\textquotesingle{}, \textquotesingle{}-\/o\textquotesingle{}, and \textquotesingle{}-\/p\textquotesingle{} switches and reads the subsequent argument. It also prints usage instructions if no arguments are provided. Throws a std::\+runtime\+\_\+error if a switch is expected but not found, or if the required input/\+output filenames are missing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of command-\/line arguments. \\
+\hline
+{\em argv} & The array of command-\/line argument strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Input A struct containing the parsed input filename, output filename, and precision. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{namespacecli_a12ec60634710a096b3d2f50ecead7644_icgraph}
+\end{center}
+\end{figure}

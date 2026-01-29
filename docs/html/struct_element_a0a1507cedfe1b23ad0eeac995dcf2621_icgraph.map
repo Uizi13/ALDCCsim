@@ -1,0 +1,5 @@
+<map id="Element::is_directed_outwards" name="Element::is_directed_outwards">
+<area shape="rect" id="Node000001" title="Checks if the element&#39;s defined direction points away from a given node." alt="" coords="220,5,360,48"/>
+<area shape="rect" id="Node000002" href="$struct_element.html#aa433afa6033b0a7e799d1f39f052c385" title="Gets the sign of the element&#39;s current with respect to a given node in KCL." alt="" coords="5,13,172,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,27,172,29,172,24,207,26"/>
+</map>

@@ -1,0 +1,192 @@
+\doxysection{src/\+solver.cpp File Reference}
+\hypertarget{solver_8cpp}{}\label{solver_8cpp}\index{src/solver.cpp@{src/solver.cpp}}
+{\ttfamily \+\#include $<$array$>$}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$ranges$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include "{}util.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}solver.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}bisect.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}constants.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{solver_8cpp_adcc9c5478c69e59280620dafadeb1386}{run}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx, bool do\+\_\+bisection)
+\begin{DoxyCompactList}\small\item\em Runs the main circuit analysis procedure. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{solver_8cpp_add061aa00c1922b96c1b48aafd8930b9}{find\+\_\+equations}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx)
+\begin{DoxyCompactList}\small\item\em Constructs the system of linear equations for the circuit using Modified Nodal Analysis (MNA). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{solver_8cpp_a984ba7dd12daeb0f03009e44cf38540e}{solve}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx)
+\begin{DoxyCompactList}\small\item\em Solves the system of linear equations stored in the context using Gaussian elimination with partial pivoting. \end{DoxyCompactList}\item 
+std::\+pair$<$ std::\+vector$<$ double $>$, std::\+vector$<$ double $>$ $>$ \doxymbox{\hyperlink{solver_8cpp_a35627a24cce6cb78a434199457c15dc0}{decode\+\_\+and\+\_\+normalize}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx)
+\begin{DoxyCompactList}\small\item\em Decodes the results from the reduced row echelon form of the equations. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{solver_8cpp_adb3f9b083d0f72a88d633a3ba7952e2a}{finalize}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx, const std::\+vector$<$ double $>$ \&potentials, const std::\+vector$<$ double $>$ \&currents)
+\begin{DoxyCompactList}\small\item\em Calculates and updates the voltage, current, and power for every circuit element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{solver_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{solver_8cpp_a35627a24cce6cb78a434199457c15dc0}\index{solver.cpp@{solver.cpp}!decode\_and\_normalize@{decode\_and\_normalize}}
+\index{decode\_and\_normalize@{decode\_and\_normalize}!solver.cpp@{solver.cpp}}
+\doxysubsubsection{\texorpdfstring{decode\_and\_normalize()}{decode\_and\_normalize()}}
+{\footnotesize\ttfamily \label{solver_8cpp_a35627a24cce6cb78a434199457c15dc0} 
+std::\+pair$<$ std::\+vector$<$ double $>$, std::\+vector$<$ double $>$ $>$ decode\+\_\+and\+\_\+normalize (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Decodes the results from the reduced row echelon form of the equations. 
+
+Extracts the solved node potentials and voltage source currents from the matrix. It also checks for and handles rows representing identity and throws an error if the circuit is contradictory or not fully determinate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing all circuit data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std::\+pair\texorpdfstring{$<$}{<}std::\+vector$<$double$>$, std::\+vector$<$double$>$\texorpdfstring{$>$}{>} A pair of vectors:\+ the first contains node potentials, the second contains voltage source currents. 
+\end{DoxyReturn}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{solver_8cpp_a35627a24cce6cb78a434199457c15dc0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8cpp_a35627a24cce6cb78a434199457c15dc0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solver_8cpp_adb3f9b083d0f72a88d633a3ba7952e2a}\index{solver.cpp@{solver.cpp}!finalize@{finalize}}
+\index{finalize@{finalize}!solver.cpp@{solver.cpp}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily \label{solver_8cpp_adb3f9b083d0f72a88d633a3ba7952e2a} 
+void finalize (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{, }\item[{const std::\+vector$<$ double $>$ \&}]{potentials}{, }\item[{const std::\+vector$<$ double $>$ \&}]{currents}{}\end{DoxyParamCaption})}
+
+
+
+Calculates and updates the voltage, current, and power for every circuit element. 
+
+Uses the solved node potentials and voltage source currents to determine the final operating parameters for all resistors, current sources, and voltage sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing all circuit data. \\
+\hline
+{\em potentials} & A vector of solved node potentials. \\
+\hline
+{\em currents} & A vector of solved voltage source currents. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{solver_8cpp_adb3f9b083d0f72a88d633a3ba7952e2a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8cpp_adb3f9b083d0f72a88d633a3ba7952e2a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solver_8cpp_add061aa00c1922b96c1b48aafd8930b9}\index{solver.cpp@{solver.cpp}!find\_equations@{find\_equations}}
+\index{find\_equations@{find\_equations}!solver.cpp@{solver.cpp}}
+\doxysubsubsection{\texorpdfstring{find\_equations()}{find\_equations()}}
+{\footnotesize\ttfamily \label{solver_8cpp_add061aa00c1922b96c1b48aafd8930b9} 
+void find\+\_\+equations (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the system of linear equations for the circuit using Modified Nodal Analysis (MNA). 
+
+This function creates equations based on:\+
+\begin{DoxyEnumerate}
+\item Ground node (Node 1) potential is zero.
+\item Voltage sources (introducing a new unknown for every voltage source current).
+\item Kirchhoff\textquotesingle{}s Current Law (KCL) for every non-\/ground node.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing all circuit data. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8cpp_add061aa00c1922b96c1b48aafd8930b9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8cpp_add061aa00c1922b96c1b48aafd8930b9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solver_8cpp_adcc9c5478c69e59280620dafadeb1386}\index{solver.cpp@{solver.cpp}!run@{run}}
+\index{run@{run}!solver.cpp@{solver.cpp}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{solver_8cpp_adcc9c5478c69e59280620dafadeb1386} 
+void run (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{, }\item[{bool}]{do\+\_\+bisection}{}\end{DoxyParamCaption})}
+
+
+
+Runs the main circuit analysis procedure. 
+
+Finds all necessary nodal and source equations, solves the resulting system of linear equations and decodes the results into node potentials and source currents. If bisection is enabled, it updates the output value for the bisection algorithm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing all circuit data. \\
+\hline
+{\em do\+\_\+bisection} & Boolean flag indicating whether to perform bisection updates. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8cpp_adcc9c5478c69e59280620dafadeb1386_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8cpp_adcc9c5478c69e59280620dafadeb1386_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solver_8cpp_a984ba7dd12daeb0f03009e44cf38540e}\index{solver.cpp@{solver.cpp}!solve@{solve}}
+\index{solve@{solve}!solver.cpp@{solver.cpp}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily \label{solver_8cpp_a984ba7dd12daeb0f03009e44cf38540e} 
+void solve (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Solves the system of linear equations stored in the context using Gaussian elimination with partial pivoting. 
+
+The equations are represented as an augmented matrix stored in {\ttfamily ctx.\+equations}. After solving, the matrix is in reduced row echelon form. Throws a std::\+runtime\+\_\+error if contradictory equations are found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing all circuit data. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8cpp_a984ba7dd12daeb0f03009e44cf38540e_icgraph}
+\end{center}
+\end{figure}

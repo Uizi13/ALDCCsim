@@ -1,0 +1,32 @@
+<map id="bisect" name="bisect">
+<area shape="rect" id="Node000001" title="Implements the bisection method to find the variable element&#39;s value that yields the desired output v..." alt="" coords="5,81,62,108"/>
+<area shape="rect" id="Node000002" href="$util_8cpp.html#a72462434483e7b3a51b0f0604125bbfb" title="Calculates the average (arithmetic mean) of two double&#45;precision numbers." alt="" coords="157,5,199,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,79,108,42,143,28,140,32,111,46,54,83"/>
+<area shape="rect" id="Node000003" href="$bisect_8cpp.html#a6caf972e3e9683cd9274703f425c07ef" title="Finds an initial search bound for the bisection method." alt="" coords="136,56,220,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="61,87,122,77,119,81,63,92"/>
+<area shape="rect" id="Node000004" href="$solver_8cpp.html#adcc9c5478c69e59280620dafadeb1386" title="Runs the main circuit analysis procedure." alt="" coords="294,107,333,133"/>
+<area shape="poly" id="edge17_Node000001_Node000004" title=" " alt="" coords="62,94,279,114,277,119,62,100"/>
+<area shape="rect" id="Node000013" href="$bisect_8cpp.html#a3d9efdfe5fd52bd130e8ecfdf487d997" title="Determines the sign of the derivative of the output value with respect to the variable element value." alt="" coords="110,157,246,184"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="58,106,111,136,135,150,130,151,108,141,57,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="216,81,282,107,277,108,216,86"/>
+<area shape="rect" id="Node000005" href="$solver_8cpp.html#a35627a24cce6cb78a434199457c15dc0" title="Decodes the results from the reduced row echelon form of the equations." alt="" coords="592,5,746,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="321,104,343,72,360,55,380,42,428,23,479,12,529,7,579,9,574,10,530,13,480,17,430,28,383,46,364,59,348,76,324,108"/>
+<area shape="rect" id="Node000007" href="$solver_8cpp.html#adb3f9b083d0f72a88d633a3ba7952e2a" title="Calculates and updates the voltage, current, and power for every circuit element." alt="" coords="431,56,494,83"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="333,110,380,92,419,82,414,84,382,97,334,115"/>
+<area shape="rect" id="Node000009" href="$solver_8cpp.html#add061aa00c1922b96c1b48aafd8930b9" title="Constructs the system of linear equations for the circuit using Modified Nodal Analysis (MNA)." alt="" coords="410,107,515,133"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="333,117,397,119,392,121,334,123"/>
+<area shape="rect" id="Node000011" href="$solver_8cpp.html#a984ba7dd12daeb0f03009e44cf38540e" title="Solves the system of linear equations stored in the context using Gaussian elimination with partial p..." alt="" coords="436,157,489,184"/>
+<area shape="poly" id="edge13_Node000004_Node000011" title=" " alt="" coords="334,125,382,143,424,159,419,159,380,148,333,130"/>
+<area shape="rect" id="Node000012" href="$bisect_8cpp.html#a7547c18d4e250b1715268f3e86d42892" title="Updates the output value for the bisection algorithm." alt="" coords="381,208,544,235"/>
+<area shape="poly" id="edge14_Node000004_Node000012" title=" " alt="" coords="325,131,349,163,383,194,393,202,388,201,380,198,345,167,323,136"/>
+<area shape="rect" id="Node000006" href="$util_8cpp.html#ac86d2bb92cd5e73751e57b55efe25e4b" title="Initializes a vector of doubles with a specified number of zeros." alt="" coords="794,107,875,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="721,30,747,42,783,67,813,96,808,95,780,71,745,46,721,35"/>
+<area shape="rect" id="Node000008" href="$util_8cpp.html#a4df3bd8d21b99bf5053e033b9ff2809d" title="Creates a unique 16&#45;bit key for a node pair, independent of the order." alt="" coords="630,56,708,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="494,67,617,69,612,70,495,72"/>
+<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="515,117,781,119,776,121,516,123"/>
+<area shape="poly" id="edge12_Node000009_Node000008" title=" " alt="" coords="515,104,618,82,613,83,516,110"/>
+<area shape="rect" id="Node000010" href="$util_8cpp.html#a952920f329fea356a71390fcffe13816" title="Inserts the equation for the ground node (Node 1) into the system." alt="" coords="602,157,736,200"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="512,131,589,155,584,155,512,137"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="730,154,778,139,783,138,732,159"/>
+<area shape="poly" id="edge16_Node000013_Node000004" title=" " alt="" coords="215,154,277,134,282,132,217,159"/>
+</map>

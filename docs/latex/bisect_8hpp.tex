@@ -1,0 +1,144 @@
+\doxysection{include/\+bisect.hpp File Reference}
+\hypertarget{bisect_8hpp}{}\label{bisect_8hpp}\index{include/bisect.hpp@{include/bisect.hpp}}
+{\ttfamily \+\#include "{}context.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{bisect_8hpp_a7547c18d4e250b1715268f3e86d42892}{update\+\_\+bisection\+\_\+output}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx)
+\begin{DoxyCompactList}\small\item\em Updates the output value for the bisection algorithm. \end{DoxyCompactList}\item 
+int8\+\_\+t \doxymbox{\hyperlink{bisect_8hpp_a3d9efdfe5fd52bd130e8ecfdf487d997}{find\+\_\+derivative\+\_\+sign}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx)
+\begin{DoxyCompactList}\small\item\em Determines the sign of the derivative of the output value with respect to the variable element value. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{bisect_8hpp_a6caf972e3e9683cd9274703f425c07ef}{find\+\_\+bound}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx, int8\+\_\+t derivative\+\_\+sign)
+\begin{DoxyCompactList}\small\item\em Finds an initial search bound for the bisection method. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{bisect_8hpp_a4cd34251e5ccdee020c25964d789f140}{bisect}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx)
+\begin{DoxyCompactList}\small\item\em Implements the bisection method to find the variable element\textquotesingle{}s value that yields the desired output value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{bisect_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{bisect_8hpp_a4cd34251e5ccdee020c25964d789f140}\index{bisect.hpp@{bisect.hpp}!bisect@{bisect}}
+\index{bisect@{bisect}!bisect.hpp@{bisect.hpp}}
+\doxysubsubsection{\texorpdfstring{bisect()}{bisect()}}
+{\footnotesize\ttfamily \label{bisect_8hpp_a4cd34251e5ccdee020c25964d789f140} 
+void bisect (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Implements the bisection method to find the variable element\textquotesingle{}s value that yields the desired output value. 
+
+It iteratively narrows the search interval ({\ttfamily range\+[0]\+} and {\ttfamily range\+[1]\+}) based on the sign of the difference between the current output and the desired output, taking into account the derivative sign. The iteration runs for \textquotesingle{}constants::\+\+BISECTION\+\_\+\+PREC\textquotesingle{} steps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing all circuit data. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bisect_8hpp_a4cd34251e5ccdee020c25964d789f140_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{bisect_8hpp_a4cd34251e5ccdee020c25964d789f140_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bisect_8hpp_a6caf972e3e9683cd9274703f425c07ef}\index{bisect.hpp@{bisect.hpp}!find\_bound@{find\_bound}}
+\index{find\_bound@{find\_bound}!bisect.hpp@{bisect.hpp}}
+\doxysubsubsection{\texorpdfstring{find\_bound()}{find\_bound()}}
+{\footnotesize\ttfamily \label{bisect_8hpp_a6caf972e3e9683cd9274703f425c07ef} 
+double find\+\_\+bound (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{, }\item[{int8\+\_\+t}]{derivative\+\_\+sign}{}\end{DoxyParamCaption})}
+
+
+
+Finds an initial search bound for the bisection method. 
+
+The function iteratively doubles an initial value until the sign of the difference between the current output and the desired output flips, indicating the solution is within the bounded range.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing all circuit data. \\
+\hline
+{\em derivative\+\_\+sign} & The sign of the output value\textquotesingle{}s derivative (1 or -\/1). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The calculated upper bound for the variable element\textquotesingle{}s value. 
+\end{DoxyReturn}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bisect_8hpp_a6caf972e3e9683cd9274703f425c07ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{bisect_8hpp_a6caf972e3e9683cd9274703f425c07ef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bisect_8hpp_a3d9efdfe5fd52bd130e8ecfdf487d997}\index{bisect.hpp@{bisect.hpp}!find\_derivative\_sign@{find\_derivative\_sign}}
+\index{find\_derivative\_sign@{find\_derivative\_sign}!bisect.hpp@{bisect.hpp}}
+\doxysubsubsection{\texorpdfstring{find\_derivative\_sign()}{find\_derivative\_sign()}}
+{\footnotesize\ttfamily \label{bisect_8hpp_a3d9efdfe5fd52bd130e8ecfdf487d997} 
+int8\+\_\+t find\+\_\+derivative\+\_\+sign (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Determines the sign of the derivative of the output value with respect to the variable element value. 
+
+It checks how the {\ttfamily ctx.\+output\+\_\+value} changes when the {\ttfamily ctx.\+variable\+\_\+elem-\/\texorpdfstring{$>$}{>}value} is perturbed by a small value ({\ttfamily constants::\+\+EPSILON}). This determines the monotonic relationship used in the bisection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing all circuit data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int8\+\_\+t 1 if the derivative is positive, -\/1 if negative. 
+\end{DoxyReturn}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bisect_8hpp_a3d9efdfe5fd52bd130e8ecfdf487d997_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{bisect_8hpp_a3d9efdfe5fd52bd130e8ecfdf487d997_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bisect_8hpp_a7547c18d4e250b1715268f3e86d42892}\index{bisect.hpp@{bisect.hpp}!update\_bisection\_output@{update\_bisection\_output}}
+\index{update\_bisection\_output@{update\_bisection\_output}!bisect.hpp@{bisect.hpp}}
+\doxysubsubsection{\texorpdfstring{update\_bisection\_output()}{update\_bisection\_output()}}
+{\footnotesize\ttfamily \label{bisect_8hpp_a7547c18d4e250b1715268f3e86d42892} 
+void update\+\_\+bisection\+\_\+output (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Updates the output value for the bisection algorithm. 
+
+Based on the {\ttfamily Value\+Type} specified in {\ttfamily ctx.\+given\+\_\+value}, this sets {\ttfamily ctx.\+output\+\_\+value} to the voltage, current, or power of the monitored element. This function is called after a full circuit run to check the result.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing all circuit data. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bisect_8hpp_a7547c18d4e250b1715268f3e86d42892_icgraph}
+\end{center}
+\end{figure}

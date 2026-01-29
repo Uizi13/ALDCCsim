@@ -1,0 +1,16 @@
+<map id="decode_and_normalize" name="decode_and_normalize">
+<area shape="rect" id="Node000001" title="Decodes the results from the reduced row echelon form of the equations." alt="" coords="479,57,633,83"/>
+<area shape="rect" id="Node000002" href="$solver_8cpp.html#adcc9c5478c69e59280620dafadeb1386" title="Runs the main circuit analysis procedure." alt="" coords="391,57,431,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="460,70,431,73,431,67,466,70"/>
+<area shape="rect" id="Node000003" href="$bisect_8cpp.html#a4cd34251e5ccdee020c25964d789f140" title="Implements the bisection method to find the variable element&#39;s value that yields the desired output v..." alt="" coords="103,57,159,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,46,365,33,342,22,305,11,275,8,245,12,208,22,175,38,148,58,145,54,172,34,206,17,244,7,275,3,306,6,344,17,368,29,389,46"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,55,134"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="389,93,368,112,344,123,304,134,263,140,181,143,108,137,55,128,55,123,109,132,181,137,262,135,303,129,342,118,365,107,384,95"/>
+<area shape="rect" id="Node000005" href="$bisect_8cpp.html#a6caf972e3e9683cd9274703f425c07ef" title="Finds an initial search bound for the bisection method." alt="" coords="233,31,317,58"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="374,64,318,55,318,50,379,63"/>
+<area shape="rect" id="Node000006" href="$bisect_8cpp.html#a3d9efdfe5fd52bd130e8ecfdf487d997" title="Determines the sign of the derivative of the output value with respect to the variable element value." alt="" coords="207,82,343,109"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="379,76,344,85,343,80,374,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,92,56,111,54,106,92,89"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="215,56,160,68,159,63,220,54"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="189,81,160,78,159,72,194,80"/>
+</map>

@@ -1,0 +1,89 @@
+\doxysection{include/\+element.hpp File Reference}
+\hypertarget{element_8hpp}{}\label{element_8hpp}\index{include/element.hpp@{include/element.hpp}}
+{\ttfamily \+\#include $<$array$>$}\newline
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_element}{Element}}
+\begin{DoxyCompactList}\small\item\em Represents a single circuit component and its solved parameters. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_given_value}{Given\+Value}}
+\begin{DoxyCompactList}\small\item\em Holds information about the desired circuit output for the bisection method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01ae}{Element\+Type}} \{ \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01aea4229bedf1c92a024dcb7c24de6da0b70}{v\+\_\+source}} = \textquotesingle{}E\textquotesingle{}
+, \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01aeabe8da4b8b8f97fc968a8b234e52e5215}{c\+\_\+source}} = \textquotesingle{}J\textquotesingle{}
+, \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01aea772109dfbc93dd355b3f496dfdc529a9}{resistor}} = \textquotesingle{}R\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of supported circuit element types. \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1}{Value\+Type}} \{ \doxymbox{\hyperlink{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1ae437ba437f4106903e619bb380574954}{voltage}} = \textquotesingle{}U\textquotesingle{}
+, \doxymbox{\hyperlink{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1a43b5c9175984c071f30b873fdce0a000}{current}} = \textquotesingle{}I\textquotesingle{}
+, \doxymbox{\hyperlink{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1a62cd275989e78ee56a81f0265a87562e}{power}} = \textquotesingle{}P\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of the measurable values that can be the target for the bisection algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{element_8hpp_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{element_8hpp_a16b11be27a8e9362dd122c4d879e01ae}\index{element.hpp@{element.hpp}!ElementType@{ElementType}}
+\index{ElementType@{ElementType}!element.hpp@{element.hpp}}
+\doxysubsubsection{\texorpdfstring{ElementType}{ElementType}}
+{\footnotesize\ttfamily \label{element_8hpp_a16b11be27a8e9362dd122c4d879e01ae} 
+enum \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01ae}{Element\+Type}}}
+
+
+
+Enumeration of supported circuit element types. 
+
+The values are set to the single-\/character representation used in the input file. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v\_source@{v\_source}!element.hpp@{element.hpp}}
+\index{element.hpp@{element.hpp}!v\_source@{v\_source}}
+}\Hypertarget{element_8hpp_a16b11be27a8e9362dd122c4d879e01aea4229bedf1c92a024dcb7c24de6da0b70}\label{element_8hpp_a16b11be27a8e9362dd122c4d879e01aea4229bedf1c92a024dcb7c24de6da0b70} 
+v\+\_\+source&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{c\_source@{c\_source}!element.hpp@{element.hpp}}
+\index{element.hpp@{element.hpp}!c\_source@{c\_source}}
+}\Hypertarget{element_8hpp_a16b11be27a8e9362dd122c4d879e01aeabe8da4b8b8f97fc968a8b234e52e5215}\label{element_8hpp_a16b11be27a8e9362dd122c4d879e01aeabe8da4b8b8f97fc968a8b234e52e5215} 
+c\+\_\+source&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{resistor@{resistor}!element.hpp@{element.hpp}}
+\index{element.hpp@{element.hpp}!resistor@{resistor}}
+}\Hypertarget{element_8hpp_a16b11be27a8e9362dd122c4d879e01aea772109dfbc93dd355b3f496dfdc529a9}\label{element_8hpp_a16b11be27a8e9362dd122c4d879e01aea772109dfbc93dd355b3f496dfdc529a9} 
+resistor&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1}\index{element.hpp@{element.hpp}!ValueType@{ValueType}}
+\index{ValueType@{ValueType}!element.hpp@{element.hpp}}
+\doxysubsubsection{\texorpdfstring{ValueType}{ValueType}}
+{\footnotesize\ttfamily \label{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1} 
+enum class \doxymbox{\hyperlink{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1}{Value\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration of the measurable values that can be the target for the bisection algorithm. 
+
+The values are set to the single-\/character representation used in the input file. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{voltage@{voltage}!element.hpp@{element.hpp}}
+\index{element.hpp@{element.hpp}!voltage@{voltage}}
+}\Hypertarget{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1ae437ba437f4106903e619bb380574954}\label{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1ae437ba437f4106903e619bb380574954} 
+voltage&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{current@{current}!element.hpp@{element.hpp}}
+\index{element.hpp@{element.hpp}!current@{current}}
+}\Hypertarget{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1a43b5c9175984c071f30b873fdce0a000}\label{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1a43b5c9175984c071f30b873fdce0a000} 
+current&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{power@{power}!element.hpp@{element.hpp}}
+\index{element.hpp@{element.hpp}!power@{power}}
+}\Hypertarget{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1a62cd275989e78ee56a81f0265a87562e}\label{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1a62cd275989e78ee56a81f0265a87562e} 
+power&\\
+\hline
+
+\end{DoxyEnumFields}

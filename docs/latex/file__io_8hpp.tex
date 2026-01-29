@@ -1,0 +1,115 @@
+\doxysection{include/\+file\+\_\+io.hpp File Reference}
+\hypertarget{file__io_8hpp}{}\label{file__io_8hpp}\index{include/file\_io.hpp@{include/file\_io.hpp}}
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include "{}context.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{file__io_8hpp_a0aa14632fb97e98cb513b50b7ab9efc8}{read}} (\doxymbox{\hyperlink{struct_context}{Context}} \&ctx, const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Reads circuit element data from an input file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{file__io_8hpp_ae0884ec89a842fa6122988c8640933fe}{write\+\_\+element}} (std::\+ofstream \&file, const \doxymbox{\hyperlink{struct_element}{Element}} \&elem)
+\begin{DoxyCompactList}\small\item\em Writes the solved parameters (voltage, current, power) for a single element to the output file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{file__io_8hpp_a2095a430c45db62b6bb733bdf07813ef}{write}} (const \doxymbox{\hyperlink{struct_context}{Context}} \&ctx, const std::\+string \&filename, bool do\+\_\+bisection)
+\begin{DoxyCompactList}\small\item\em Writes the final results of the circuit analysis to the output file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{file__io_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{file__io_8hpp_a0aa14632fb97e98cb513b50b7ab9efc8}\index{file\_io.hpp@{file\_io.hpp}!read@{read}}
+\index{read@{read}!file\_io.hpp@{file\_io.hpp}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{file__io_8hpp_a0aa14632fb97e98cb513b50b7ab9efc8} 
+bool read (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{, }\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Reads circuit element data from an input file. 
+
+Parses each line for element type, node 1, node 2, and element value. It also detects the presence of a variable element (missing value) and a desired output value for the bisection method. Updates the {\ttfamily ctx.\+max\+\_\+node}. Throws a std::\+runtime\+\_\+error on failure to read, too many variable elements, or mismatched solving procedure (variable element vs. given value).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object to store the parsed data. \\
+\hline
+{\em filename} & The name of the input file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if a variable element and desired output were found, indicating bisection is needed. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{file__io_8hpp_a0aa14632fb97e98cb513b50b7ab9efc8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{file__io_8hpp_a2095a430c45db62b6bb733bdf07813ef}\index{file\_io.hpp@{file\_io.hpp}!write@{write}}
+\index{write@{write}!file\_io.hpp@{file\_io.hpp}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily \label{file__io_8hpp_a2095a430c45db62b6bb733bdf07813ef} 
+void write (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_context}{Context}} \&}]{ctx}{, }\item[{const std::\+string \&}]{filename}{, }\item[{bool}]{do\+\_\+bisection}{}\end{DoxyParamCaption})}
+
+
+
+Writes the final results of the circuit analysis to the output file. 
+
+Includes the element table (U, I, P) and the node potential table (V). If bisection was performed, it also writes the final value of the variable element. Applies rounding to the specified precision.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The Context object containing the elements and bisection data. \\
+\hline
+{\em filename} & The name of the output file. \\
+\hline
+{\em do\+\_\+bisection} & Boolean flag indicating if bisection was performed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file__io_8hpp_a2095a430c45db62b6bb733bdf07813ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{file__io_8hpp_a2095a430c45db62b6bb733bdf07813ef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{file__io_8hpp_ae0884ec89a842fa6122988c8640933fe}\index{file\_io.hpp@{file\_io.hpp}!write\_element@{write\_element}}
+\index{write\_element@{write\_element}!file\_io.hpp@{file\_io.hpp}}
+\doxysubsubsection{\texorpdfstring{write\_element()}{write\_element()}}
+{\footnotesize\ttfamily \label{file__io_8hpp_ae0884ec89a842fa6122988c8640933fe} 
+void write\+\_\+element (\begin{DoxyParamCaption}\item[{std::\+ofstream \&}]{file}{, }\item[{const \doxymbox{\hyperlink{struct_element}{Element}} \&}]{elem}{}\end{DoxyParamCaption})}
+
+
+
+Writes the solved parameters (voltage, current, power) for a single element to the output file. 
+
+The output is formatted into columns with alignment and rounding applied.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The output file stream. \\
+\hline
+{\em elem} & The Element object to write. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file__io_8hpp_ae0884ec89a842fa6122988c8640933fe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{file__io_8hpp_ae0884ec89a842fa6122988c8640933fe_icgraph}
+\end{center}
+\end{figure}

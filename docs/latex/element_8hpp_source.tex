@@ -1,0 +1,49 @@
+\doxysection{element.\+hpp}
+\hypertarget{element_8hpp_source}{}\label{element_8hpp_source}\index{include/element.hpp@{include/element.hpp}}
+\doxymbox{\hyperlink{element_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01ae}{ElementType}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01aea4229bedf1c92a024dcb7c24de6da0b70}{v\_source}}\ =\ \textcolor{charliteral}{'E'},}
+\DoxyCodeLine{00012\ \ \ \ \ \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01aeabe8da4b8b8f97fc968a8b234e52e5215}{c\_source}}\ =\ \textcolor{charliteral}{'J'},}
+\DoxyCodeLine{00013\ \ \ \ \ \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01aea772109dfbc93dd355b3f496dfdc529a9}{resistor}}\ =\ \textcolor{charliteral}{'R'}}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_element}{Element}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{element_8hpp_a16b11be27a8e9362dd122c4d879e01ae}{ElementType}}\ \doxymbox{\hyperlink{struct_element_a26df53b4f21db8ca789e1706ecf8b4f3}{type}};}
+\DoxyCodeLine{00022\ \ \ \ \ std::array<uint8\_t,\ 2>\ \doxymbox{\hyperlink{struct_element_aa629acde46d2f4179e76bc9ddde46a98}{nodes}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_element_af65a42ccff052d8538c210735ec63b23}{value}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_element_ad9c428477cb8dfedd123cfe7daff9c86}{voltage}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_element_ad42419d21d67905450e63cd82628d575}{current}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_element_a95d803014ef3299e1cf5573643bac43e}{power}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_element_a0a1507cedfe1b23ad0eeac995dcf2621}{is\_directed\_outwards}}(\textcolor{keyword}{const}\ uint8\_t\ node)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_element_aa629acde46d2f4179e76bc9ddde46a98}{nodes}}[0]\ ==\ node;}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00047\ \ \ \ \ int8\_t\ \doxymbox{\hyperlink{struct_element_aa433afa6033b0a7e799d1f39f052c385}{sign\_of\_current}}(\textcolor{keyword}{const}\ uint8\_t\ node)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}int8\_t\textcolor{keyword}{>}(2\ *\ \doxymbox{\hyperlink{struct_element_a0a1507cedfe1b23ad0eeac995dcf2621}{is\_directed\_outwards}}(node)\ -\/\ 1);\ \ \ \ \textcolor{comment}{//\ 1\ if\ current\ leaves,\ -\/1\ when\ enters}}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \ \ uint8\_t\ \doxymbox{\hyperlink{struct_element_a525cf859b425e54a186c4c4030d33392}{other\_node}}(\textcolor{keyword}{const}\ uint8\_t\ node)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_element_aa629acde46d2f4179e76bc9ddde46a98}{nodes}}[0]\ ==\ node?\ \doxymbox{\hyperlink{struct_element_aa629acde46d2f4179e76bc9ddde46a98}{nodes}}[1]\ :\ \doxymbox{\hyperlink{struct_element_aa629acde46d2f4179e76bc9ddde46a98}{nodes}}[0];}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1}{ValueType}}\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \doxymbox{\hyperlink{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1ae437ba437f4106903e619bb380574954}{voltage}}\ =\ \textcolor{charliteral}{'U'},}
+\DoxyCodeLine{00069\ \ \ \ \ \doxymbox{\hyperlink{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1a43b5c9175984c071f30b873fdce0a000}{current}}\ =\ \textcolor{charliteral}{'I'},}
+\DoxyCodeLine{00070\ \ \ \ \ \doxymbox{\hyperlink{util_8hpp_a7251a9354f90717505bec5d2620e9a30}{power}}\ =\ \textcolor{charliteral}{'P'}}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_given_value}{GivenValue}}\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \doxymbox{\hyperlink{struct_element}{Element}}*\ \doxymbox{\hyperlink{struct_given_value_a905f619f822a7a81a8e6c704e1e37391}{elem}};}
+\DoxyCodeLine{00079\ \ \ \ \ \doxymbox{\hyperlink{element_8hpp_ad9971b6ef33e02ba2c75d19c1d2518a1}{ValueType}}\ \doxymbox{\hyperlink{struct_given_value_a103aa69260b3f8a5cbf909f1571fa65a}{v\_type}};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_given_value_aa44c0fc50677f347245d801da208a292}{desired\_value}};}
+\DoxyCodeLine{00081\ \};}
+
+\end{DoxyCode}

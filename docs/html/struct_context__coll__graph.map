@@ -1,0 +1,8 @@
+<map id="Context" name="Context">
+<area shape="rect" id="Node000001" title="A structure holding all runtime data and state for the circuit analysis." alt="" coords="6,203,74,229"/>
+<area shape="rect" id="Node000002" href="$struct_element.html" title="Represents a single circuit component and its solved parameters." alt="" coords="5,5,75,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="37,45,33,104,35,159,41,202,35,202,30,159,28,104,36,50"/>
+<area shape="rect" id="Node000003" href="$struct_given_value.html" title="Holds information about the desired circuit output for the bisection method." alt="" coords="131,104,218,131"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="71,39,159,102,155,105,70,44"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,142,59,204,56,200,143,138"/>
+</map>

@@ -1,0 +1,26 @@
+\doxysection{context.\+hpp}
+\hypertarget{context_8hpp_source}{}\label{context_8hpp_source}\index{include/context.hpp@{include/context.hpp}}
+\doxymbox{\hyperlink{context_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{element_8hpp}{element.hpp}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_context}{Context}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ uint8\_t\ \doxymbox{\hyperlink{struct_context_a6672dc411b3e1c17056bc9669f50d518}{max\_node}}\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ uint8\_t\ \doxymbox{\hyperlink{struct_context_a7ef0cca907595b01b774ce9e262c121d}{number\_of\_unknowns}}\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<Element>\ \doxymbox{\hyperlink{struct_context_a2ee8646ad667cff584df96acf51f2705}{elements}};}
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<double>\ \doxymbox{\hyperlink{struct_context_ad1d0f3456d4ceda91e4b7deb8249b053}{potentials}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{struct_element}{Element}}*\ \doxymbox{\hyperlink{struct_context_a3a2cdd48840d25e2b22e30ef5cf2c28d}{variable\_elem}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{struct_given_value}{GivenValue}}\ \doxymbox{\hyperlink{struct_context_a1f8ff4312e259163441a2607a6f99927}{given\_value}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_context_aeb5b698812175614d31234e33f44a318}{output\_value}}\ =\ 0;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ std::unordered\_map<uint16\_t,\ uint8\_t>\ \doxymbox{\hyperlink{struct_context_a3d5a9bb66d629d1ccff9c479243bc155}{v\_source\_currents\_map}};}
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<std::vector<double>>\ \doxymbox{\hyperlink{struct_context_a692c6be59a49660f047958313c8192f0}{equations}};}
+\DoxyCodeLine{00027\ \};}
+
+\end{DoxyCode}

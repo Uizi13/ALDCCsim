@@ -1,0 +1,110 @@
+\doxysection{Context Struct Reference}
+\hypertarget{struct_context}{}\label{struct_context}\index{Context@{Context}}
+
+
+A structure holding all runtime data and state for the circuit analysis.  
+
+
+
+
+{\ttfamily \+\#include $<$context.\+hpp$>$}
+
+
+
+Collaboration diagram for Context:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{struct_context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{struct_context_a6672dc411b3e1c17056bc9669f50d518}{max\+\_\+node}} = 0
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{struct_context_a7ef0cca907595b01b774ce9e262c121d}{number\+\_\+of\+\_\+unknowns}} = 0
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_element}{Element}} $>$ \doxymbox{\hyperlink{struct_context_a2ee8646ad667cff584df96acf51f2705}{elements}}
+\item 
+std::\+vector$<$ double $>$ \doxymbox{\hyperlink{struct_context_ad1d0f3456d4ceda91e4b7deb8249b053}{potentials}}
+\item 
+\doxymbox{\hyperlink{struct_element}{Element}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_context_a3a2cdd48840d25e2b22e30ef5cf2c28d}{variable\+\_\+elem}} = nullptr
+\item 
+\doxymbox{\hyperlink{struct_given_value}{Given\+Value}} \doxymbox{\hyperlink{struct_context_a1f8ff4312e259163441a2607a6f99927}{given\+\_\+value}}
+\item 
+double \doxymbox{\hyperlink{struct_context_aeb5b698812175614d31234e33f44a318}{output\+\_\+value}} = 0
+\item 
+std::\+unordered\+\_\+map$<$ uint16\+\_\+t, uint8\+\_\+t $>$ \doxymbox{\hyperlink{struct_context_a3d5a9bb66d629d1ccff9c479243bc155}{v\+\_\+source\+\_\+currents\+\_\+map}}
+\item 
+std::\+vector$<$ std::\+vector$<$ double $>$ $>$ \doxymbox{\hyperlink{struct_context_a692c6be59a49660f047958313c8192f0}{equations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A structure holding all runtime data and state for the circuit analysis. 
+
+This includes the circuit elements, the maximum node index, the MNA system\textquotesingle{}s equations, and state variables for the bisection algorithm. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_context_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_context_a2ee8646ad667cff584df96acf51f2705}\index{Context@{Context}!elements@{elements}}
+\index{elements@{elements}!Context@{Context}}
+\doxysubsubsection{\texorpdfstring{elements}{elements}}
+{\footnotesize\ttfamily \label{struct_context_a2ee8646ad667cff584df96acf51f2705} 
+std::\+vector$<$\doxymbox{\hyperlink{struct_element}{Element}}$>$ Context::\+elements}
+
+\Hypertarget{struct_context_a692c6be59a49660f047958313c8192f0}\index{Context@{Context}!equations@{equations}}
+\index{equations@{equations}!Context@{Context}}
+\doxysubsubsection{\texorpdfstring{equations}{equations}}
+{\footnotesize\ttfamily \label{struct_context_a692c6be59a49660f047958313c8192f0} 
+std::\+vector$<$std::\+vector$<$double$>$ $>$ Context::\+equations}
+
+\Hypertarget{struct_context_a1f8ff4312e259163441a2607a6f99927}\index{Context@{Context}!given\_value@{given\_value}}
+\index{given\_value@{given\_value}!Context@{Context}}
+\doxysubsubsection{\texorpdfstring{given\_value}{given\_value}}
+{\footnotesize\ttfamily \label{struct_context_a1f8ff4312e259163441a2607a6f99927} 
+\doxymbox{\hyperlink{struct_given_value}{Given\+Value}} Context::\+given\+\_\+value}
+
+\Hypertarget{struct_context_a6672dc411b3e1c17056bc9669f50d518}\index{Context@{Context}!max\_node@{max\_node}}
+\index{max\_node@{max\_node}!Context@{Context}}
+\doxysubsubsection{\texorpdfstring{max\_node}{max\_node}}
+{\footnotesize\ttfamily \label{struct_context_a6672dc411b3e1c17056bc9669f50d518} 
+uint8\+\_\+t Context::\+max\+\_\+node = 0}
+
+\Hypertarget{struct_context_a7ef0cca907595b01b774ce9e262c121d}\index{Context@{Context}!number\_of\_unknowns@{number\_of\_unknowns}}
+\index{number\_of\_unknowns@{number\_of\_unknowns}!Context@{Context}}
+\doxysubsubsection{\texorpdfstring{number\_of\_unknowns}{number\_of\_unknowns}}
+{\footnotesize\ttfamily \label{struct_context_a7ef0cca907595b01b774ce9e262c121d} 
+uint8\+\_\+t Context::\+number\+\_\+of\+\_\+unknowns = 0}
+
+\Hypertarget{struct_context_aeb5b698812175614d31234e33f44a318}\index{Context@{Context}!output\_value@{output\_value}}
+\index{output\_value@{output\_value}!Context@{Context}}
+\doxysubsubsection{\texorpdfstring{output\_value}{output\_value}}
+{\footnotesize\ttfamily \label{struct_context_aeb5b698812175614d31234e33f44a318} 
+double Context::\+output\+\_\+value = 0}
+
+\Hypertarget{struct_context_ad1d0f3456d4ceda91e4b7deb8249b053}\index{Context@{Context}!potentials@{potentials}}
+\index{potentials@{potentials}!Context@{Context}}
+\doxysubsubsection{\texorpdfstring{potentials}{potentials}}
+{\footnotesize\ttfamily \label{struct_context_ad1d0f3456d4ceda91e4b7deb8249b053} 
+std::\+vector$<$double$>$ Context::\+potentials}
+
+\Hypertarget{struct_context_a3d5a9bb66d629d1ccff9c479243bc155}\index{Context@{Context}!v\_source\_currents\_map@{v\_source\_currents\_map}}
+\index{v\_source\_currents\_map@{v\_source\_currents\_map}!Context@{Context}}
+\doxysubsubsection{\texorpdfstring{v\_source\_currents\_map}{v\_source\_currents\_map}}
+{\footnotesize\ttfamily \label{struct_context_a3d5a9bb66d629d1ccff9c479243bc155} 
+std::\+unordered\+\_\+map$<$uint16\+\_\+t, uint8\+\_\+t$>$ Context::\+v\+\_\+source\+\_\+currents\+\_\+map}
+
+\Hypertarget{struct_context_a3a2cdd48840d25e2b22e30ef5cf2c28d}\index{Context@{Context}!variable\_elem@{variable\_elem}}
+\index{variable\_elem@{variable\_elem}!Context@{Context}}
+\doxysubsubsection{\texorpdfstring{variable\_elem}{variable\_elem}}
+{\footnotesize\ttfamily \label{struct_context_a3a2cdd48840d25e2b22e30ef5cf2c28d} 
+\doxymbox{\hyperlink{struct_element}{Element}}\texorpdfstring{$\ast$}{*} Context::\+variable\+\_\+elem = nullptr}
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{context_8hpp}{context.\+hpp}}\end{DoxyCompactItemize}

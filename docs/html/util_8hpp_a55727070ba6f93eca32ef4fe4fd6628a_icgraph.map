@@ -1,0 +1,21 @@
+<map id="node_key" name="node_key">
+<area shape="rect" id="Node000001" title="Creates a unique 16&#45;bit key for a node pair, independent of the order." alt="" coords="632,57,709,83"/>
+<area shape="rect" id="Node000002" href="$solver_8cpp.html#adb3f9b083d0f72a88d633a3ba7952e2a" title="Calculates and updates the voltage, current, and power for every circuit element." alt="" coords="500,31,562,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="614,60,563,53,563,48,619,60"/>
+<area shape="rect" id="Node000008" href="$solver_8cpp.html#add061aa00c1922b96c1b48aafd8930b9" title="Constructs the system of linear equations for the circuit using Modified Nodal Analysis (MNA)." alt="" coords="479,82,584,109"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="619,79,585,88,584,83,614,80"/>
+<area shape="rect" id="Node000003" href="$solver_8cpp.html#adcc9c5478c69e59280620dafadeb1386" title="Runs the main circuit analysis procedure." alt="" coords="391,57,431,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,54,432,69,431,63,483,55"/>
+<area shape="rect" id="Node000004" href="$bisect_8cpp.html#a4cd34251e5ccdee020c25964d789f140" title="Implements the bisection method to find the variable element&#39;s value that yields the desired output v..." alt="" coords="103,57,159,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="383,46,365,33,342,22,305,11,275,8,245,12,208,22,175,38,148,58,145,54,172,34,206,17,244,7,275,3,306,6,344,17,368,29,389,46"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,55,134"/>
+<area shape="poly" id="edge9_Node000003_Node000005" title=" " alt="" coords="389,93,368,112,344,123,304,134,263,140,181,143,108,137,55,128,55,123,109,132,181,137,262,135,303,129,342,118,365,107,384,95"/>
+<area shape="rect" id="Node000006" href="$bisect_8cpp.html#a6caf972e3e9683cd9274703f425c07ef" title="Finds an initial search bound for the bisection method." alt="" coords="233,31,317,58"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="374,64,318,55,318,50,379,63"/>
+<area shape="rect" id="Node000007" href="$bisect_8cpp.html#a3d9efdfe5fd52bd130e8ecfdf487d997" title="Determines the sign of the derivative of the output value with respect to the variable element value." alt="" coords="207,82,343,109"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="379,76,344,85,343,80,374,77"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,92,56,111,54,106,92,89"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="215,56,160,68,159,63,220,54"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="189,81,160,78,159,72,194,80"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="460,81,431,77,431,71,466,81"/>
+</map>

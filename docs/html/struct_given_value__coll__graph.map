@@ -1,0 +1,5 @@
+<map id="GivenValue" name="GivenValue">
+<area shape="rect" id="Node000001" title="Holds information about the desired circuit output for the bisection method." alt="" coords="5,104,93,131"/>
+<area shape="rect" id="Node000002" href="$struct_element.html" title="Represents a single circuit component and its solved parameters." alt="" coords="14,5,84,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,47,52,104,46,103,47,49"/>
+</map>

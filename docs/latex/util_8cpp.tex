@@ -1,0 +1,262 @@
+\doxysection{src/\+util.cpp File Reference}
+\hypertarget{util_8cpp}{}\label{util_8cpp}\index{src/util.cpp@{src/util.cpp}}
+{\ttfamily \+\#include "{}util.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include "{}element.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include "{}constants.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{util_8cpp_a43a459b5de75352d975727ce8ff0f424}{get\+\_\+number\+\_\+of\+\_\+unknowns}} (const std::\+vector$<$ \doxymbox{\hyperlink{struct_element}{Element}} $>$ \&elements, const uint8\+\_\+t max\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Calculates the total number of unknowns in the MNA system. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{util_8cpp_ac86d2bb92cd5e73751e57b55efe25e4b}{init\+\_\+vector}} (std::\+vector$<$ double $>$ \&vector, const uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Initializes a vector of doubles with a specified number of zeros. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{util_8cpp_a952920f329fea356a71390fcffe13816}{insert\+\_\+ground\+\_\+node\+\_\+equation}} (std::\+vector$<$ std::\+vector$<$ double $>$ $>$ \&equations, const uint8\+\_\+t unknowns)
+\begin{DoxyCompactList}\small\item\em Inserts the equation for the ground node (Node 1) into the system. \end{DoxyCompactList}\item 
+uint16\+\_\+t \doxymbox{\hyperlink{util_8cpp_a4df3bd8d21b99bf5053e033b9ff2809d}{node\+\_\+key}} (const uint8\+\_\+t node\+\_\+0, const uint8\+\_\+t node\+\_\+1)
+\begin{DoxyCompactList}\small\item\em Creates a unique 16-\/bit key for a node pair, independent of the order. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{util_8cpp_a5f51b9a304d802381a1bc02deb64716c}{current\+\_\+source\+\_\+only\+\_\+node}} (const std::\+vector$<$ \doxymbox{\hyperlink{struct_element}{Element}} $>$ \&elements, const uint8\+\_\+t max\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Checks if there is a node connected only to current sources. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{util_8cpp_a57c2083a26a0ae9d1ede7a7fa3519e0c}{parallel\+\_\+voltage\+\_\+sources}} (const std::\+vector$<$ \doxymbox{\hyperlink{struct_element}{Element}} $>$ \&elements)
+\begin{DoxyCompactList}\small\item\em Checks for voltage sources connected in parallel. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{util_8cpp_a72462434483e7b3a51b0f0604125bbfb}{avg}} (double a, double b)
+\begin{DoxyCompactList}\small\item\em Calculates the average (arithmetic mean) of two double-\/precision numbers. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{util_8cpp_aac2750788374accf69f4853c27304dc2}{round\+\_\+to\+\_\+prec}} (double value)
+\begin{DoxyCompactList}\small\item\em Rounds a double-\/precision value to the specified number of significant digits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{util_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{util_8cpp_a72462434483e7b3a51b0f0604125bbfb}\index{util.cpp@{util.cpp}!avg@{avg}}
+\index{avg@{avg}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{avg()}{avg()}}
+{\footnotesize\ttfamily \label{util_8cpp_a72462434483e7b3a51b0f0604125bbfb} 
+double avg (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the average (arithmetic mean) of two double-\/precision numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first number. \\
+\hline
+{\em b} & The second number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The average of a and b. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{util_8cpp_a72462434483e7b3a51b0f0604125bbfb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{util_8cpp_a5f51b9a304d802381a1bc02deb64716c}\index{util.cpp@{util.cpp}!current\_source\_only\_node@{current\_source\_only\_node}}
+\index{current\_source\_only\_node@{current\_source\_only\_node}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{current\_source\_only\_node()}{current\_source\_only\_node()}}
+{\footnotesize\ttfamily \label{util_8cpp_a5f51b9a304d802381a1bc02deb64716c} 
+bool current\+\_\+source\+\_\+only\+\_\+node (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{struct_element}{Element}} $>$ \&}]{elements}{, }\item[{uint8\+\_\+t}]{max\+\_\+node}{}\end{DoxyParamCaption})}
+
+
+
+Checks if there is a node connected only to current sources. 
+
+This condition makes the node\textquotesingle{}s voltage indeterminate, as only KCL equations (which govern current) apply, not Ohm\textquotesingle{}s law (which relates voltage and current).
+
+
+\begin{DoxyParams}{Parameters}
+{\em elements} & A constant reference to the vector of circuit elements. \\
+\hline
+{\em max\+\_\+node} & The highest node index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if such a node exists, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{util_8cpp_a5f51b9a304d802381a1bc02deb64716c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{util_8cpp_a43a459b5de75352d975727ce8ff0f424}\index{util.cpp@{util.cpp}!get\_number\_of\_unknowns@{get\_number\_of\_unknowns}}
+\index{get\_number\_of\_unknowns@{get\_number\_of\_unknowns}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_number\_of\_unknowns()}{get\_number\_of\_unknowns()}}
+{\footnotesize\ttfamily \label{util_8cpp_a43a459b5de75352d975727ce8ff0f424} 
+uint8\+\_\+t get\+\_\+number\+\_\+of\+\_\+unknowns (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{struct_element}{Element}} $>$ \&}]{elements}{, }\item[{uint8\+\_\+t}]{max\+\_\+node}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the total number of unknowns in the MNA system. 
+
+The number of unknowns is equal to the maximum node index (for node potentials) plus the number of voltage sources (for voltage source currents).
+
+
+\begin{DoxyParams}{Parameters}
+{\em elements} & A constant reference to the vector of circuit elements. \\
+\hline
+{\em max\+\_\+node} & The highest node index in the circuit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t The total number of unknowns. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{util_8cpp_a43a459b5de75352d975727ce8ff0f424_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{util_8cpp_ac86d2bb92cd5e73751e57b55efe25e4b}\index{util.cpp@{util.cpp}!init\_vector@{init\_vector}}
+\index{init\_vector@{init\_vector}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{init\_vector()}{init\_vector()}}
+{\footnotesize\ttfamily \label{util_8cpp_ac86d2bb92cd5e73751e57b55efe25e4b} 
+void init\+\_\+vector (\begin{DoxyParamCaption}\item[{std::\+vector$<$ double $>$ \&}]{vector}{, }\item[{uint8\+\_\+t}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a vector of doubles with a specified number of zeros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & The vector to be initialized. \\
+\hline
+{\em n} & The number of zeros to append. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{util_8cpp_ac86d2bb92cd5e73751e57b55efe25e4b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{util_8cpp_a952920f329fea356a71390fcffe13816}\index{util.cpp@{util.cpp}!insert\_ground\_node\_equation@{insert\_ground\_node\_equation}}
+\index{insert\_ground\_node\_equation@{insert\_ground\_node\_equation}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{insert\_ground\_node\_equation()}{insert\_ground\_node\_equation()}}
+{\footnotesize\ttfamily \label{util_8cpp_a952920f329fea356a71390fcffe13816} 
+void insert\+\_\+ground\+\_\+node\+\_\+equation (\begin{DoxyParamCaption}\item[{std::\+vector$<$ std::\+vector$<$ double $>$ $>$ \&}]{equations}{, }\item[{uint8\+\_\+t}]{unknowns}{}\end{DoxyParamCaption})}
+
+
+
+Inserts the equation for the ground node (Node 1) into the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em equations} & The vector of equation rows (augmented matrix). \\
+\hline
+{\em unknowns} & The total number of unknowns in the system. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{util_8cpp_a952920f329fea356a71390fcffe13816_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{util_8cpp_a952920f329fea356a71390fcffe13816_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{util_8cpp_a4df3bd8d21b99bf5053e033b9ff2809d}\index{util.cpp@{util.cpp}!node\_key@{node\_key}}
+\index{node\_key@{node\_key}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{node\_key()}{node\_key()}}
+{\footnotesize\ttfamily \label{util_8cpp_a4df3bd8d21b99bf5053e033b9ff2809d} 
+uint16\+\_\+t node\+\_\+key (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{node\+\_\+0}{, }\item[{uint8\+\_\+t}]{node\+\_\+1}{}\end{DoxyParamCaption})}
+
+
+
+Creates a unique 16-\/bit key for a node pair, independent of the order. 
+
+The key is constructed by shifting the greater node to the upper 8 bits and the smaller node to the lower 8 bits.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+0} & The first node index. \\
+\hline
+{\em node\+\_\+1} & The second node index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The unique node key. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{util_8cpp_a4df3bd8d21b99bf5053e033b9ff2809d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{util_8cpp_a57c2083a26a0ae9d1ede7a7fa3519e0c}\index{util.cpp@{util.cpp}!parallel\_voltage\_sources@{parallel\_voltage\_sources}}
+\index{parallel\_voltage\_sources@{parallel\_voltage\_sources}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{parallel\_voltage\_sources()}{parallel\_voltage\_sources()}}
+{\footnotesize\ttfamily \label{util_8cpp_a57c2083a26a0ae9d1ede7a7fa3519e0c} 
+bool parallel\+\_\+voltage\+\_\+sources (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{struct_element}{Element}} $>$ \&}]{elements}{}\end{DoxyParamCaption})}
+
+
+
+Checks for voltage sources connected in parallel. 
+
+Parallel voltage sources (connected to the same two nodes) lead to an indeterminate current in the branches, making the system unsolvable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em elements} & A constant reference to the vector of circuit elements. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if parallel voltage sources are found, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{util_8cpp_a57c2083a26a0ae9d1ede7a7fa3519e0c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{util_8cpp_aac2750788374accf69f4853c27304dc2}\index{util.cpp@{util.cpp}!round\_to\_prec@{round\_to\_prec}}
+\index{round\_to\_prec@{round\_to\_prec}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{round\_to\_prec()}{round\_to\_prec()}}
+{\footnotesize\ttfamily \label{util_8cpp_aac2750788374accf69f4853c27304dc2} 
+double round\+\_\+to\+\_\+prec (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Rounds a double-\/precision value to the specified number of significant digits. 
+
+Uses {\ttfamily constants::\+prec\+\_\+factor()} to scale the value for rounding. Special handling to ensure negative zero is not returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to be rounded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The rounded value. 
+\end{DoxyReturn}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{util_8cpp_aac2750788374accf69f4853c27304dc2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{util_8cpp_aac2750788374accf69f4853c27304dc2_icgraph}
+\end{center}
+\end{figure}

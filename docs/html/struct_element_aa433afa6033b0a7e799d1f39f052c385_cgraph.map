@@ -1,0 +1,5 @@
+<map id="Element::sign_of_current" name="Element::sign_of_current">
+<area shape="rect" id="Node000001" title="Gets the sign of the element&#39;s current with respect to a given node in KCL." alt="" coords="5,13,172,40"/>
+<area shape="rect" id="Node000002" href="$struct_element.html#a0a1507cedfe1b23ad0eeac995dcf2621" title="Checks if the element&#39;s defined direction points away from a given node." alt="" coords="220,5,360,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,24,207,26,202,27,172,29"/>
+</map>

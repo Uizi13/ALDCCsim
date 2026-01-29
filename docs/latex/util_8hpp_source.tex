@@ -1,0 +1,33 @@
+\doxysection{util.\+hpp}
+\hypertarget{util_8hpp_source}{}\label{util_8hpp_source}\index{include/util.hpp@{include/util.hpp}}
+\doxymbox{\hyperlink{util_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{element_8hpp}{element.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00017\ uint8\_t\ \doxymbox{\hyperlink{util_8hpp_aaf377df078961facdfbfea25e66ac301}{get\_number\_of\_unknowns}}(\textcolor{keyword}{const}\ std::vector<Element>\&\ elements,\ uint8\_t\ max\_node);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{util_8hpp_a8b7dd37b6e42d0970a4263b95a1e4058}{init\_vector}}(std::vector<double>\&\ vector,\ uint8\_t\ n);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{util_8hpp_ad05c2e4b7e8256b6471efee7913a2770}{insert\_ground\_node\_equation}}(std::vector<std::vector<double>>\&\ equations,\ uint8\_t\ unknowns);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00045\ uint16\_t\ \doxymbox{\hyperlink{util_8hpp_a55727070ba6f93eca32ef4fe4fd6628a}{node\_key}}(uint8\_t\ node\_0,\ uint8\_t\ node\_1);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{util_8hpp_a8679f63da213c30df657026aa7285cca}{current\_source\_only\_node}}(\textcolor{keyword}{const}\ std::vector<Element>\&\ elements,\ uint8\_t\ max\_node);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{util_8hpp_a57c2083a26a0ae9d1ede7a7fa3519e0c}{parallel\_voltage\_sources}}(\textcolor{keyword}{const}\ std::vector<Element>\&\ elements);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{util_8hpp_a72462434483e7b3a51b0f0604125bbfb}{avg}}(\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{util_8hpp_a7251a9354f90717505bec5d2620e9a30}{power}}(\textcolor{keywordtype}{double}\ base,\ \textcolor{keywordtype}{int}\ exp)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ 1.0;}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{while}\ (exp-\/-\/\ >\ 0)\ result\ *=\ base;}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00093\ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{util_8hpp_aac2750788374accf69f4853c27304dc2}{round\_to\_prec}}(\textcolor{keywordtype}{double}\ value);}
+
+\end{DoxyCode}

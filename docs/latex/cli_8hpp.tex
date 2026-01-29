@@ -1,0 +1,28 @@
+\doxysection{include/\+cli.hpp File Reference}
+\hypertarget{cli_8hpp}{}\label{cli_8hpp}\index{include/cli.hpp@{include/cli.hpp}}
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structcli_1_1_input}{cli::\+\+Input}}
+\begin{DoxyCompactList}\small\item\em Holds the parsed command-\/line input values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacecli}{cli}}
+\begin{DoxyCompactList}\small\item\em Contains functions and structures for command-\/line argument parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973e}{cli::\+\+Switch}} \{ \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973ea334c4a4c42fdb79d7ebc3e73b517e6f8}{cli::\+none}} = 0
+, \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973ea13b5bfe96f3e2fe411c9f66f4a582adf}{cli::\+in}} = \textquotesingle{}i\textquotesingle{}
+, \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973eac68271a63ddbc431c307beb7d2918275}{cli::\+out}} = \textquotesingle{}o\textquotesingle{}
+, \doxymbox{\hyperlink{namespacecli_aed3160a32556ffae625dfb49b20b973eae81f51b496552d5548d2739e87daf131}{cli::\+prec}} = \textquotesingle{}p\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the valid command-\/line switches for the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structcli_1_1_input}{Input}} \doxymbox{\hyperlink{namespacecli_a12ec60634710a096b3d2f50ecead7644}{cli::\+parse}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Parses the command line arguments to extract input file, output file, and precision. \end{DoxyCompactList}\end{DoxyCompactItemize}

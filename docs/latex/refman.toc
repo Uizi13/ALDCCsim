@@ -1,0 +1,143 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Directory Hierarchy}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Directories}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Namespace Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Namespace List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Directory Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}include Directory Reference}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}src Directory Reference}{9}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Namespace Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}cli Namespace Reference}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{11}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Enumeration Type Documentation}{12}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}Switch}{12}{subsubsection.6.1.2.1}%
+\contentsline {subsection}{\numberline {6.1.3}Function Documentation}{12}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}parse()}{12}{subsubsection.6.1.3.1}%
+\contentsline {section}{\numberline {6.2}constants Namespace Reference}{12}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{13}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Function Documentation}{13}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}prec\_factor()}{13}{subsubsection.6.2.2.1}%
+\contentsline {subsection}{\numberline {6.2.3}Variable Documentation}{13}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}BISECTION\_PREC}{13}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}EPSILON}{13}{subsubsection.6.2.3.2}%
+\contentsline {subsubsection}{\numberline {6.2.3.3}PRECISION}{13}{subsubsection.6.2.3.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.4}ZERO\_TRESHOLD}{13}{subsubsection.6.2.3.4}%
+\contentsline {chapter}{\numberline {7}Class Documentation}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Context Struct Reference}{15}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{15}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Member Data Documentation}{15}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}elements}{15}{subsubsection.7.1.2.1}%
+\contentsline {subsubsection}{\numberline {7.1.2.2}equations}{15}{subsubsection.7.1.2.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.3}given\_value}{16}{subsubsection.7.1.2.3}%
+\contentsline {subsubsection}{\numberline {7.1.2.4}max\_node}{16}{subsubsection.7.1.2.4}%
+\contentsline {subsubsection}{\numberline {7.1.2.5}number\_of\_unknowns}{16}{subsubsection.7.1.2.5}%
+\contentsline {subsubsection}{\numberline {7.1.2.6}output\_value}{16}{subsubsection.7.1.2.6}%
+\contentsline {subsubsection}{\numberline {7.1.2.7}v\_source\_currents\_map}{16}{subsubsection.7.1.2.7}%
+\contentsline {subsubsection}{\numberline {7.1.2.8}variable\_elem}{16}{subsubsection.7.1.2.8}%
+\contentsline {section}{\numberline {7.2}Element Struct Reference}{16}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{17}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Member Function Documentation}{17}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}is\_directed\_outwards()}{17}{subsubsection.7.2.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2.2}other\_node()}{17}{subsubsection.7.2.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.3}sign\_of\_current()}{18}{subsubsection.7.2.2.3}%
+\contentsline {subsection}{\numberline {7.2.3}Member Data Documentation}{18}{subsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.3.1}current}{18}{subsubsection.7.2.3.1}%
+\contentsline {subsubsection}{\numberline {7.2.3.2}nodes}{18}{subsubsection.7.2.3.2}%
+\contentsline {subsubsection}{\numberline {7.2.3.3}power}{18}{subsubsection.7.2.3.3}%
+\contentsline {subsubsection}{\numberline {7.2.3.4}type}{18}{subsubsection.7.2.3.4}%
+\contentsline {subsubsection}{\numberline {7.2.3.5}value}{18}{subsubsection.7.2.3.5}%
+\contentsline {subsubsection}{\numberline {7.2.3.6}voltage}{18}{subsubsection.7.2.3.6}%
+\contentsline {section}{\numberline {7.3}Given\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Value Struct Reference}{19}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{19}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Member Data Documentation}{19}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}desired\_value}{19}{subsubsection.7.3.2.1}%
+\contentsline {subsubsection}{\numberline {7.3.2.2}elem}{19}{subsubsection.7.3.2.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.3}v\_type}{19}{subsubsection.7.3.2.3}%
+\contentsline {section}{\numberline {7.4}cli::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Input Struct Reference}{19}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{20}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Member Data Documentation}{20}{subsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.1}ifname}{20}{subsubsection.7.4.2.1}%
+\contentsline {subsubsection}{\numberline {7.4.2.2}ofname}{20}{subsubsection.7.4.2.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.3}prec}{20}{subsubsection.7.4.2.3}%
+\contentsline {chapter}{\numberline {8}File Documentation}{21}{chapter.8}%
+\contentsline {section}{\numberline {8.1}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bisect.hpp File Reference}{21}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Function Documentation}{21}{subsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.1.1}bisect()}{21}{subsubsection.8.1.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.1.2}find\_bound()}{22}{subsubsection.8.1.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.1.3}find\_derivative\_sign()}{22}{subsubsection.8.1.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.1.4}update\_bisection\_output()}{22}{subsubsection.8.1.1.4}%
+\contentsline {section}{\numberline {8.2}bisect.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{23}{section.8.2}%
+\contentsline {section}{\numberline {8.3}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cli.hpp File Reference}{23}{section.8.3}%
+\contentsline {section}{\numberline {8.4}cli.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{24}{section.8.4}%
+\contentsline {section}{\numberline {8.5}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}constants.hpp File Reference}{24}{section.8.5}%
+\contentsline {section}{\numberline {8.6}constants.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{24}{section.8.6}%
+\contentsline {section}{\numberline {8.7}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}context.hpp File Reference}{25}{section.8.7}%
+\contentsline {section}{\numberline {8.8}context.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{25}{section.8.8}%
+\contentsline {section}{\numberline {8.9}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}element.hpp File Reference}{25}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Enumeration Type Documentation}{26}{subsection.8.9.1}%
+\contentsline {subsubsection}{\numberline {8.9.1.1}ElementType}{26}{subsubsection.8.9.1.1}%
+\contentsline {subsubsection}{\numberline {8.9.1.2}ValueType}{26}{subsubsection.8.9.1.2}%
+\contentsline {section}{\numberline {8.10}element.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{26}{section.8.10}%
+\contentsline {section}{\numberline {8.11}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}io.hpp File Reference}{27}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Function Documentation}{27}{subsection.8.11.1}%
+\contentsline {subsubsection}{\numberline {8.11.1.1}read()}{27}{subsubsection.8.11.1.1}%
+\contentsline {subsubsection}{\numberline {8.11.1.2}write()}{28}{subsubsection.8.11.1.2}%
+\contentsline {subsubsection}{\numberline {8.11.1.3}write\_element()}{28}{subsubsection.8.11.1.3}%
+\contentsline {section}{\numberline {8.12}file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}io.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{28}{section.8.12}%
+\contentsline {section}{\numberline {8.13}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}solver.hpp File Reference}{28}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Function Documentation}{29}{subsection.8.13.1}%
+\contentsline {subsubsection}{\numberline {8.13.1.1}decode\_and\_normalize()}{29}{subsubsection.8.13.1.1}%
+\contentsline {subsubsection}{\numberline {8.13.1.2}finalize()}{29}{subsubsection.8.13.1.2}%
+\contentsline {subsubsection}{\numberline {8.13.1.3}find\_equations()}{30}{subsubsection.8.13.1.3}%
+\contentsline {subsubsection}{\numberline {8.13.1.4}run()}{30}{subsubsection.8.13.1.4}%
+\contentsline {subsubsection}{\numberline {8.13.1.5}solve()}{31}{subsubsection.8.13.1.5}%
+\contentsline {section}{\numberline {8.14}solver.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{31}{section.8.14}%
+\contentsline {section}{\numberline {8.15}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}util.hpp File Reference}{31}{section.8.15}%
+\contentsline {subsection}{\numberline {8.15.1}Function Documentation}{32}{subsection.8.15.1}%
+\contentsline {subsubsection}{\numberline {8.15.1.1}avg()}{32}{subsubsection.8.15.1.1}%
+\contentsline {subsubsection}{\numberline {8.15.1.2}current\_source\_only\_node()}{32}{subsubsection.8.15.1.2}%
+\contentsline {subsubsection}{\numberline {8.15.1.3}get\_number\_of\_unknowns()}{33}{subsubsection.8.15.1.3}%
+\contentsline {subsubsection}{\numberline {8.15.1.4}init\_vector()}{33}{subsubsection.8.15.1.4}%
+\contentsline {subsubsection}{\numberline {8.15.1.5}insert\_ground\_node\_equation()}{33}{subsubsection.8.15.1.5}%
+\contentsline {subsubsection}{\numberline {8.15.1.6}node\_key()}{34}{subsubsection.8.15.1.6}%
+\contentsline {subsubsection}{\numberline {8.15.1.7}parallel\_voltage\_sources()}{34}{subsubsection.8.15.1.7}%
+\contentsline {subsubsection}{\numberline {8.15.1.8}power()}{34}{subsubsection.8.15.1.8}%
+\contentsline {subsubsection}{\numberline {8.15.1.9}round\_to\_prec()}{35}{subsubsection.8.15.1.9}%
+\contentsline {section}{\numberline {8.16}util.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{35}{section.8.16}%
+\contentsline {section}{\numberline {8.17}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bisect.cpp File Reference}{36}{section.8.17}%
+\contentsline {subsection}{\numberline {8.17.1}Function Documentation}{36}{subsection.8.17.1}%
+\contentsline {subsubsection}{\numberline {8.17.1.1}bisect()}{36}{subsubsection.8.17.1.1}%
+\contentsline {subsubsection}{\numberline {8.17.1.2}find\_bound()}{36}{subsubsection.8.17.1.2}%
+\contentsline {subsubsection}{\numberline {8.17.1.3}find\_derivative\_sign()}{37}{subsubsection.8.17.1.3}%
+\contentsline {subsubsection}{\numberline {8.17.1.4}update\_bisection\_output()}{37}{subsubsection.8.17.1.4}%
+\contentsline {section}{\numberline {8.18}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cli.cpp File Reference}{37}{section.8.18}%
+\contentsline {section}{\numberline {8.19}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}io.cpp File Reference}{38}{section.8.19}%
+\contentsline {subsection}{\numberline {8.19.1}Function Documentation}{38}{subsection.8.19.1}%
+\contentsline {subsubsection}{\numberline {8.19.1.1}read()}{38}{subsubsection.8.19.1.1}%
+\contentsline {subsubsection}{\numberline {8.19.1.2}write()}{39}{subsubsection.8.19.1.2}%
+\contentsline {subsubsection}{\numberline {8.19.1.3}write\_element()}{39}{subsubsection.8.19.1.3}%
+\contentsline {section}{\numberline {8.20}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main.cpp File Reference}{40}{section.8.20}%
+\contentsline {subsection}{\numberline {8.20.1}Function Documentation}{40}{subsection.8.20.1}%
+\contentsline {subsubsection}{\numberline {8.20.1.1}main()}{40}{subsubsection.8.20.1.1}%
+\contentsline {section}{\numberline {8.21}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}solver.cpp File Reference}{40}{section.8.21}%
+\contentsline {subsection}{\numberline {8.21.1}Function Documentation}{41}{subsection.8.21.1}%
+\contentsline {subsubsection}{\numberline {8.21.1.1}decode\_and\_normalize()}{41}{subsubsection.8.21.1.1}%
+\contentsline {subsubsection}{\numberline {8.21.1.2}finalize()}{41}{subsubsection.8.21.1.2}%
+\contentsline {subsubsection}{\numberline {8.21.1.3}find\_equations()}{41}{subsubsection.8.21.1.3}%
+\contentsline {subsubsection}{\numberline {8.21.1.4}run()}{42}{subsubsection.8.21.1.4}%
+\contentsline {subsubsection}{\numberline {8.21.1.5}solve()}{42}{subsubsection.8.21.1.5}%
+\contentsline {section}{\numberline {8.22}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}util.cpp File Reference}{42}{section.8.22}%
+\contentsline {subsection}{\numberline {8.22.1}Function Documentation}{43}{subsection.8.22.1}%
+\contentsline {subsubsection}{\numberline {8.22.1.1}avg()}{43}{subsubsection.8.22.1.1}%
+\contentsline {subsubsection}{\numberline {8.22.1.2}current\_source\_only\_node()}{44}{subsubsection.8.22.1.2}%
+\contentsline {subsubsection}{\numberline {8.22.1.3}get\_number\_of\_unknowns()}{44}{subsubsection.8.22.1.3}%
+\contentsline {subsubsection}{\numberline {8.22.1.4}init\_vector()}{45}{subsubsection.8.22.1.4}%
+\contentsline {subsubsection}{\numberline {8.22.1.5}insert\_ground\_node\_equation()}{45}{subsubsection.8.22.1.5}%
+\contentsline {subsubsection}{\numberline {8.22.1.6}node\_key()}{45}{subsubsection.8.22.1.6}%
+\contentsline {subsubsection}{\numberline {8.22.1.7}parallel\_voltage\_sources()}{46}{subsubsection.8.22.1.7}%
+\contentsline {subsubsection}{\numberline {8.22.1.8}round\_to\_prec()}{46}{subsubsection.8.22.1.8}%
+\contentsline {chapter}{Index}{47}{section*.34}%

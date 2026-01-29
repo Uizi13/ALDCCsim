@@ -1,0 +1,5 @@
+<map id="finalize" name="finalize">
+<area shape="rect" id="Node000001" title="Calculates and updates the voltage, current, and power for every circuit element." alt="" coords="5,5,68,32"/>
+<area shape="rect" id="Node000002" href="$util_8cpp.html#a4df3bd8d21b99bf5053e033b9ff2809d" title="Creates a unique 16&#45;bit key for a node pair, independent of the order." alt="" coords="116,5,193,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,16,103,18,97,19,68,21"/>
+</map>

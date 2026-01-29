@@ -1,0 +1,16 @@
+<map id="include/bisect.hpp" name="include/bisect.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="67,5,194,32"/>
+<area shape="rect" id="Node000002" href="$context_8hpp.html" title=" " alt="" coords="86,80,175,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,30,133,65,128,64,130,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="64,229,125,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,107,45,125,27,139,13,156,9,174,17,190,34,206,55,221,50,223,30,210,13,193,4,174,8,153,23,135,43,121,87,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="22,155,132,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="123,105,98,144,93,140,120,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="157,155,214,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="141,105,169,142,164,142,139,110"/>
+<area shape="rect" id="Node000006" href="$element_8hpp.html" title=" " alt="" coords="238,155,330,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="158,105,246,147,241,149,157,110"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="254,182,140,227,139,222,248,182"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="259,229,309,256"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="286,180,286,215,282,212,282,184"/>
+</map>
