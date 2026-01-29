@@ -3,7 +3,7 @@
 ALDCCsim is a C++ command-line tool designed to solve linear electrical circuits using Modified Nodal Analysis (MNA). The solver supports resistors, independent voltage sources, and independent current sources. It also features a bisection-based optimization engine to find specific component values required to achieve a desired circuit output (voltage, current, or power).
 
 ### Below is a shorter description of the program made for users. The original task description, analysis of the problem as well as internal specification and testing can be found in:
-<div class="my_center"> <div class="my_fragment"> docs/detailed_description.md </div> </div>
+docs/detailed_description.md
 
 ## Features
 
@@ -26,7 +26,7 @@ ALDCCsim is a C++ command-line tool designed to solve linear electrical circuits
 The program has two modes of operation that are determined by the program internally based on contents of the input file:
 ### Basic mode
 #### Input
-Each line of the input file should contain one [element](@ref Element) along with nodes to which it is connected and a value.
+Each line of the input file should contain one element along with nodes to which it is connected and a value.
 ```
 <Type> <Node1> <Node2> <Value>
 ```
@@ -36,7 +36,7 @@ A node is every tree of wires separated from other nodes with elements. Nodes sh
 
 > Note: The order of nodes is important for specifying in which direction sources are placed. They are directed from the first node towards the second. This order is also important in how results are presented. (see [sign convention](#sign-convention))
 
-[Element types](@ref ElementType):
+Element types:
 - **E** denotes a voltage source
 - **J** denotes a current source
 - **R** denotes a resistor
@@ -169,7 +169,7 @@ The optimization process follows these steps:
 
 1. **Derivative Sign Detection**: The simulator perturbs the variable element by a small value to determine if the output increases or decreases.
 2. **Bound Finding**: It iteratively doubles the search range until the desired value is bracketed.
-3. **Iteration**: The solver performs 50 iterations ([BISECTION_PREC](@ref constants::BISECTION_PREC)) to converge on the final component value with high precision.
+3. **Iteration**: The solver performs 50 iterations to converge on the final component value with high precision.
 
 #### 4. Error Handling and Validation
 
