@@ -145,7 +145,7 @@ Values given in the **Element Table** are given in accordance to **passive sign 
 Each element's current is positive if it flows in the direction from the first node to the second. 
 
 > Example: If an element is described in the input file in the following way: `R 4 3 1.5`,
-> the simulator will output its curent as **positive** if it flows **from node `4` to node `3`**.
+> the simulator will output its current as **positive** if it flows **from node `4` to node `3`**.
 
 ---
 
